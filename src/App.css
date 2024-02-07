@@ -2,6 +2,11 @@
 {
   width: 120px;
   height: 40px;
+  border-radius: 8px;
+
 }
 
+.no-spacing {
+  margin-right: 3
+}
 

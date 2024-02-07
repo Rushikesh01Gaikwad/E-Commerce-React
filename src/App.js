@@ -1,11 +1,13 @@
 import './App.css';
 import Navbar from './header/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './header/Header';
 
 function App() {
   return (
     <>
-      <Navbar style={{ backgroundColor: '#0abab5' }}></Navbar>
+      <Navbar></Navbar>
+      <Header></Header>
    </>
   );
 }

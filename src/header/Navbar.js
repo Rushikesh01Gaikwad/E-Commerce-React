@@ -1,11 +1,7 @@
-import React , { useEffect } from 'react';
+import React from 'react';
 
 
 export default function Navbar() {
-  useEffect(() => {
-    const dropdownToggleList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
-    dropdownToggleList.map((dropdownToggleEl) => new window.bootstrap.Dropdown(dropdownToggleEl));
-  }, []);
   return (
     <div>
       <nav className="navbar navbar-expand-lg " style={{ backgroundColor: '#009698'}}>
