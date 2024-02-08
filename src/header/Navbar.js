@@ -28,9 +28,9 @@ export default function Navbar() {
       </div>
       <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
     </div>
-    <button type="button" className="btn btn-light font-weight-bold mx-2" data-bs-toggle="button">🔤Language</button>
-    <button type="button" className="btn btn-light font-weight-bold mx-2" data-bs-toggle="button">👤Sign in</button>
-    <button type="button" className="btn btn-light font-weight-bold mx-2" data-bs-toggle="button">🛒Cart</button>
+    <button type="button" className="btn btn-light mx-2" data-bs-toggle="button">🔤Language</button>
+    <button type="button" className="btn btn-light mx-2" data-bs-toggle="button">👤Sign in</button>
+    <button type="button" className="btn btn-light mx-2" data-bs-toggle="button">🛒Cart</button>
   </div>
 </nav>
     </div>
