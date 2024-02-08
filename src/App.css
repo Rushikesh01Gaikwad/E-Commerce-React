@@ -10,3 +10,38 @@
   margin-right: 3
 }
 
+.custom-carousel {
+  width: 50%; 
+  height: 400px; 
+  margin: 10px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.custom-carousel img {
+  max-width: 140%; 
+  height: auto; 
+  max-height: 140%; 
+  width: auto;
+}
+
+.main
+{
+  margin: 1px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+
+}
+
+.sec-2
+{
+  width: 50%; 
+  height: 400px; 
+  margin: 10px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+
