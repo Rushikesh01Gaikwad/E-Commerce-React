@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <div>
+    <div className="aligndiv">
       <nav className="navbar navbar-expand bg-body-tertiary container-fluid">
         <button type="button" className="btn"><h6>All >> </h6></button>
         <button type="button" className="btn"><h6>Best Sellers</h6></button>

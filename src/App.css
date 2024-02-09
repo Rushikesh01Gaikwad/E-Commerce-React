@@ -19,9 +19,9 @@
 }
 
 .custom-carousel img {
-  max-width: 140%; 
+  max-width: 1000px; 
   height: auto; 
-  max-height: 140%; 
+  max-height: 1000px; 
   width: auto;
 }
 
@@ -44,6 +44,28 @@
   margin-left: 0px;
 }
 
+.aligndiv
+{
+  margin-top: 8px;
+}
 
+.algincat
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-top: 40px;
+}
 
+.card-rating .fa-star 
+{
+  color: #ffc107;
+}
+
+.btnflotdiv
+{
+  float: right;
+  margin-right: 125px;
+}
 

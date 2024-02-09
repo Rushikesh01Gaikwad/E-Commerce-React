@@ -11,7 +11,7 @@ import aircomp1 from '../Images/air compresser/air compressor 7.png'
 export default function Carosel() {
   return (
 
-      <div className="main">
+      <div className="main aligndiv">
         <div id="carouselExampleAutoplaying" className="carousel slide  custom-carousel" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active custom-carousel img">
@@ -38,9 +38,9 @@ export default function Carosel() {
             <section>
                 <h3>Under 700 | Combo Pack | Multiple Brand & Much More...</h3>
                 <div>
-                    <img src={aircomp} alt="compressor" style={{width:'400px', height:'367px'}}></img>
-                    <img src={aircomp1} alt="compressor" style={{width:'400px', height:'367px', margin:'7px'}}></img>
-                    <button type="button" className="btn btn-light" data-bs-toggle="button"><h6>See All Offers</h6></button>
+                    <img src={aircomp} alt="compressor" style={{width:'380px', height:'360px'}}></img>
+                    <img src={aircomp1} alt="compressor" style={{width:'380px', height:'360px', margin:'7px'}}></img>
+                    <button type="button" className="btn btn-outline-dark mx-3" data-bs-toggle="button"><h6>See All Offers</h6></button>
                 </div>
             </section>
         </div>
