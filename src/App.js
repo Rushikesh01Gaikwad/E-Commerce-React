@@ -7,7 +7,8 @@ import CatagoryListDiv from './shopdives/CatagoryListDiv';
 import LastArrival from './shopdives/LastArrival';
 import Divtechmode from './shopdives/Divtechmode';
 import Findmore from './shopdives/Findmore';
-import Aboutus from './shopdives/Aboutus';
+import Aboutus from './footer/Aboutus';
+import Footer from './footer/Footer';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Divtechmode></Divtechmode>
       <Findmore></Findmore>
       <Aboutus></Aboutus>
+      <Footer></Footer>
    </>
   );
 }

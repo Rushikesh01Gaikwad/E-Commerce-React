@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <div className="aligndiv">
+    <div className="aligndiv" style={{marginLeft:"10px"}}>
       <nav className="navbar navbar-expand bg-body-tertiary container-fluid">
-        <button type="button" className="btn"><h6>All >> </h6></button>
+        <label><h6>All>></h6></label>
         <button type="button" className="btn"><h6>Best Sellers</h6></button>
         <button type="button" className="btn"><h6>Today's Deals</h6></button>
         <button type="button" className="btn"><h6>Mobiles</h6></button>
