@@ -5,6 +5,9 @@ import Header from './header/Header';
 import Carosel from './slides/Carosel';
 import CatagoryListDiv from './shopdives/CatagoryListDiv';
 import LastArrival from './shopdives/LastArrival';
+import Divtechmode from './shopdives/Divtechmode';
+import Findmore from './shopdives/Findmore';
+import Aboutus from './shopdives/Aboutus';
 
 
 function App() {
@@ -15,6 +18,9 @@ function App() {
       <Carosel></Carosel>
       <CatagoryListDiv></CatagoryListDiv>
       <LastArrival></LastArrival>
+      <Divtechmode></Divtechmode>
+      <Findmore></Findmore>
+      <Aboutus></Aboutus>
    </>
   );
 }

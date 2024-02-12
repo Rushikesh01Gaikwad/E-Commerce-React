@@ -69,3 +69,15 @@
   margin-right: 125px;
 }
 
+.aboutstyle
+{
+  background-color: rgb(191, 201, 202);
+  width: 100%;
+  margin-top: 5px;
+}
+
+.iconsizes
+{
+  height: 2rem;
+  width: 2rem;
+}
