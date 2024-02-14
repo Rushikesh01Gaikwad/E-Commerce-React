@@ -2,8 +2,7 @@ import React from 'react'
 import logo from'../Images/logo/150years.png'
 import cr1 from '../Images/crousel Images/the-indian-fashion-crousel1.png'
 import cr2 from '../Images/crousel Images/perfume-crousel2.png'
-// import cr3 from '../Images/crousel Images/crousel3.png'
-import cr4 from '../Images/crousel Images/cruosel4.png'
+import cr3 from '../Images/crousel Images/cruosel4.png'
 import { Carousel } from 'bootstrap'
 import singM from '../Images/crousel Images/menpos.png'
 import singW from '../Images/crousel Images/womenpose.png'
@@ -23,7 +22,7 @@ export default function Carosel() {
                 <img src={cr2} className="d-block" alt="..."/>
                 </div>
                 <div className="carousel-item active custom-carousel img">
-                <img src={cr4} className="d-block" alt="..."/>
+                <img src={cr3} className="d-block" alt="..."/>
                 </div>
                 
             </div>
