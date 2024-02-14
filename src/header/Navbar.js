@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../Images/logo/mitraalogoo.png'
 
 
 export default function Navbar() {
@@ -6,8 +7,8 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg " style={{ backgroundColor: '#009698'}}>
   <div className="container-fluid">
-    <a className="navbar-brand" href="/">
-      <img className="complogo" src='https://www.indiantextilemagazine.in/wp-content/uploads/2023/11/atlas-copco-group-logo-white-box-copy.jpg' alt=""></img>
+    <a className="navbar-brand">
+      <img className="complogo" src={logo} alt=""></img>
     </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -17,13 +18,13 @@ export default function Navbar() {
         <button type="button" className="btn btn-light font-weight-bold mx-2" data-bs-toggle="button">Location</button>
       </ul>
       <div className="dropdown mx-3">
-        <button className="btn custom-button dropdown-toggle btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button className="btn custom-button dropdown-toggle btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="true">
         Select Country
         </button>
         <ul class="dropdown-menu">
-          <li><a className="dropdown-item" href="/">Action</a></li>
-          <li><a className="dropdown-item" href="/">Another action</a></li>
-          <li><a className="dropdown-item" href="/">Something else here</a></li>
+          <li><a className="dropdown-item" href="/">India</a></li>
+          <li><a className="dropdown-item" href="/">USA</a></li>
+          <li><a className="dropdown-item" href="/">Canada</a></li>
         </ul>
       </div>
       <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

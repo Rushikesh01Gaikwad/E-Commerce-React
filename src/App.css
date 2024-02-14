@@ -3,6 +3,7 @@
   width: 120px;
   height: 40px;
   border-radius: 8px;
+  background-color: white;
 
 }
 
@@ -80,4 +81,15 @@
 {
   height: 2rem;
   width: 2rem;
+}
+
+.footerbottom
+{
+  bottom: 0;
+  width: 100%;
+  height: 30px; /* Adjust as per your footer height */
+  background-color: black;
+  text-align: center;
+  color:white;
+  line-height: 70px;
 }

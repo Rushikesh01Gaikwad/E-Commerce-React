@@ -9,9 +9,11 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src="https://atlascopco.scene7.com/is/image/atlascopco/service+engineer?$landscape400$" className="card-img-top" alt="..."/>
-                <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                    <h5 className="card-title">Air compresser, blowers and industrial gas solutions</h5>
-                </div>
+                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
+                        <span className="card-title"><h5>Vaccume Solutions</h5></span>
+                    </div>
+                </button>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -23,9 +25,11 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src="https://www.airenergy.com.au/wp-content/uploads/2015/08/atlas-copco-compressors-screw.jpg" className="card-img-top" alt="..."/>
-                <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                    <h5 className="card-title">Vaccume Solutions</h5>
-                </div>
+                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
+                        <span className="card-title"><h5>Vaccume Solutions</h5></span>
+                    </div>
+                </button>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -37,9 +41,11 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src="https://www.nepic.co.uk/wp-content/uploads/memberblogsposts/images/Press%20release1%20h2-45.jpg%20(small).jpg" className="card-img-top" alt="..."/>
-                <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                    <h5 className="card-title">Rental 24/7 reliable solutions</h5>
-                </div>
+                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
+                        <span className="card-title"><h5>Vaccume Solutions</h5></span>
+                    </div>
+                </button>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -51,9 +57,11 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src="https://atlascopco.scene7.com/is/image/atlascopco/service+engineer?$landscape400$" className="card-img-top" alt="..."/>
-                <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                    <h5 className="card-title">Air compresser, blowers and industrial gas solutions</h5>
-                </div>
+                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
+                        <span className="card-title"><h5>Vaccume Solutions</h5></span>
+                    </div>
+                </button>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -65,9 +73,11 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src="https://www.airenergy.com.au/wp-content/uploads/2015/08/atlas-copco-compressors-screw.jpg" className="card-img-top" alt="..."/>
-                <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                    <h5 className="card-title">Vaccume Solutions</h5>
-                </div>
+                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
+                        <span className="card-title"><h5>Vaccume Solutions</h5></span>
+                    </div>
+                </button>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -79,9 +89,11 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src="https://atlascopco.scene7.com/is/image/atlascopco/service+engineer?$landscape400$" className="card-img-top" alt="..."/>
-                <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                    <h5 className="card-title">Air compresser, blowers and industrial gas solutions</h5>
-                </div>
+                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
+                        <span className="card-title"><h5>Vaccume Solutions</h5></span>
+                    </div>
+                </button>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -93,9 +105,11 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src="https://www.airenergy.com.au/wp-content/uploads/2015/08/atlas-copco-compressors-screw.jpg" className="card-img-top" alt="..."/>
-                <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                    <h5 className="card-title">Vaccume Solutions</h5>
-                </div>
+                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
+                        <span className="card-title"><h5>Vaccume Solutions</h5></span>
+                    </div>
+                </button>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -107,9 +121,11 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src="https://www.nepic.co.uk/wp-content/uploads/memberblogsposts/images/Press%20release1%20h2-45.jpg%20(small).jpg" className="card-img-top" alt="..."/>
-                <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                    <h5 className="card-title">Rental 24/7 reliable solutions</h5>
-                </div>
+                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
+                        <span className="card-title"><h5>Vaccume Solutions</h5></span>
+                    </div>
+                </button>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>

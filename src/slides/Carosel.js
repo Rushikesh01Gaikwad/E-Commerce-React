@@ -1,10 +1,12 @@
 import React from 'react'
 import logo from'../Images/logo/150years.png'
-import logo1 from '../Images/logo/flag.png'
-import logo2 from '../Images/logo/environ atlas.png'
+import cr1 from '../Images/crousel Images/the-indian-fashion-crousel1.png'
+import cr2 from '../Images/crousel Images/perfume-crousel2.png'
+// import cr3 from '../Images/crousel Images/crousel3.png'
+import cr4 from '../Images/crousel Images/cruosel4.png'
 import { Carousel } from 'bootstrap'
-import aircomp from '../Images/air compresser/air compressor 6.png'
-import aircomp1 from '../Images/air compresser/air compressor 7.png'
+import singM from '../Images/crousel Images/menpos.png'
+import singW from '../Images/crousel Images/womenpose.png'
 
 
 
@@ -15,13 +17,13 @@ export default function Carosel() {
         <div id="carouselExampleAutoplaying" className="carousel slide  custom-carousel" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active custom-carousel img">
-                <img src={logo} className="d-block" alt="..."/>
+                <img src={cr1} className="d-block" alt="..."/>
                 </div>
                 <div className="carousel-item active custom-carousel img">
-                <img src={logo1} className="d-block" alt="..."/>
+                <img src={cr2} className="d-block" alt="..."/>
                 </div>
                 <div className="carousel-item active custom-carousel img">
-                <img src={logo2} className="d-block" alt="..."/>
+                <img src={cr4} className="d-block" alt="..."/>
                 </div>
                 
             </div>
@@ -38,8 +40,8 @@ export default function Carosel() {
             <section>
                 <h3>Under 700 | Combo Pack | Multiple Brand & Much More...</h3>
                 <div>
-                    <img src={aircomp} alt="compressor" style={{width:'380px', height:'360px'}}></img>
-                    <img src={aircomp1} alt="compressor" style={{width:'380px', height:'360px', margin:'7px'}}></img>
+                    <img src={singM} alt="compressor" style={{width:'380px', height:'360px'}}></img>
+                    <img src={singW} alt="compressor" style={{width:'380px', height:'360px', margin:'7px'}}></img>
                     <button type="button" className="btn btn-outline-dark mx-3" data-bs-toggle="button"><h6>See All Offers</h6></button>
                 </div>
             </section>
