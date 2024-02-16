@@ -1,9 +1,8 @@
 import React from 'react'
-import logo from'../Images/logo/150years.png'
-import cr1 from '../Images/crousel Images/the-indian-fashion-crousel1.png'
-import cr2 from '../Images/crousel Images/perfume-crousel2.png'
-import cr3 from '../Images/crousel Images/cruosel4.png'
 import { Carousel } from 'bootstrap'
+import cr1 from '../Images/crousel Images/the-indian-fashion-crousel1.png'
+// import cr2 from '../Images/crousel Images/perfume-crousel2.png'
+// import cr3 from '../Images/crousel Images/cruosel4.png'
 import singM from '../Images/crousel Images/menpos.png'
 import singW from '../Images/crousel Images/womenpose.png'
 
@@ -12,18 +11,18 @@ import singW from '../Images/crousel Images/womenpose.png'
 export default function Carosel() {
   return (
 
-      <div className="main aligndiv">
-        <div id="carouselExampleAutoplaying" className="carousel slide  custom-carousel" data-bs-ride="carousel">
+      <div className="headerdiv">
+        <div id="carouselExampleAutoplaying" className="carousel slide headerleftdiv" data-bs-ride="carousel">
             <div className="carousel-inner">
-                <div className="carousel-item active custom-carousel img">
-                <img src={cr1} className="d-block" alt="..."/>
+                <div className="carousel-item active">
+                <img src={cr1} className="d-block crouselimgadjust" alt="img1"/>
                 </div>
-                <div className="carousel-item active custom-carousel img">
-                <img src={cr2} className="d-block" alt="..."/>
+                {/* <div className="carousel-item active">
+                <img src={cr2} className="d-block crouselimgadjust" alt="img2"/>
                 </div>
-                <div className="carousel-item active custom-carousel img">
-                <img src={cr3} className="d-block" alt="..."/>
-                </div>
+                <div className="carousel-item active">
+                <img src={cr3} className="d-block crouselimgadjust" alt="img3"/>
+                </div> */}
                 
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -35,13 +34,13 @@ export default function Carosel() {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
-        <div className="sec-2">
-            <section>
+        <div className="headerrightdiv">
+            <section style={{marginLeft:"1vw"}}>
                 <h3>Under 700 | Combo Pack | Multiple Brand & Much More...</h3>
                 <div>
-                    <img src={singM} alt="compressor" style={{width:'380px', height:'360px'}}></img>
-                    <img src={singW} alt="compressor" style={{width:'380px', height:'360px', margin:'7px'}}></img>
-                    <button type="button" className="btn btn-outline-dark mx-3" data-bs-toggle="button"><h6>See All Offers</h6></button>
+                    <img src={singM} alt="offerimg" className="headerrightdivimg"></img>
+                    <img src={singW} alt="offerimg" className="headerrightdivimg"></img><br/>
+                    <button type="button" className="btn btn-outline-dark mx-3 my-3" data-bs-toggle="button"><h6>See All Offers</h6></button>
                 </div>
             </section>
         </div>

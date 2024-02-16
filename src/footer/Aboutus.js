@@ -3,7 +3,7 @@ import React from 'react'
 export default function Aboutus() {
   return (
     <div className="aboutstyle">
-        <div className=" algincat">
+        <div className=" divtopmarg">
         <br/>
         <div className="row row-cols-1 row-cols-md-4 g-4">
             <div className="col">
@@ -41,16 +41,16 @@ export default function Aboutus() {
             <div className="col">
             <h5><b>Keep In Touch</b></h5>
                 <a href="/">
-                    <img src="https://assets-global.website-files.com/614069317241cba124a0dd3b/614069317241cbebbda0dd5b_fb.svg" alt className="iconsizes m-2" ></img>
+                    <img src="https://assets-global.website-files.com/614069317241cba124a0dd3b/614069317241cbebbda0dd5b_fb.svg" alt="fbicon" className="iconsizes m-2" ></img>
                 </a>
                 <a href="/">
-                    <img src="	https://assets-global.website-files.com/614069317241cba124a0dd3b/614069317241cbe55aa0dd50_in.svg" alt className="iconsizes m-2" ></img>
+                    <img src="	https://assets-global.website-files.com/614069317241cba124a0dd3b/614069317241cbe55aa0dd50_in.svg" alt="linicon" className="iconsizes m-2" ></img>
                 </a>
                 <a href="/">
-                    <img src="https://assets-global.website-files.com/614069317241cba124a0dd3b/614069317241cb5db2a0dd4f_ig.svg" alt className="iconsizes m-2" ></img>
+                    <img src="https://assets-global.website-files.com/614069317241cba124a0dd3b/614069317241cb5db2a0dd4f_ig.svg" alt="fabuc" className="iconsizes m-2" ></img>
                 </a>
                 <a href="/">
-                    <img src="https://assets-global.website-files.com/614069317241cba124a0dd3b/614069317241cbc7d1a0dd55_yt.svg" alt className="iconsizes m-2" ></img>
+                    <img src="https://assets-global.website-files.com/614069317241cba124a0dd3b/614069317241cbc7d1a0dd55_yt.svg" alt="yticon" className="iconsizes m-2" ></img>
                 </a>
             </div>
         </div>

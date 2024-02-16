@@ -7,67 +7,79 @@
 
 }
 
-.no-spacing {
-  margin-right: 3
+.hover {
+  --s: 0.1em;
+  --c: #009698;
+  
+  color: #0000;
+  padding-bottom: var(--s);
+  background: 
+    linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.5s;
+}
+.hover:hover {
+  --_p: 100%
 }
 
-.custom-carousel {
-  width: 50%; 
-  height: 400px; 
-  margin: 10px;
-  margin-top: 0px;
-  margin-left: 0px;
-}
 
-.custom-carousel img {
-  max-width: 1000px; 
-  height: auto; 
-  max-height: 1000px; 
-  width: auto;
-}
-
-.main
+.nav
 {
-  margin: 1px;
+  width: 100vw;
+}
+
+.headerdiv
+{
+  margin: 1vw;
   padding: 0;
   display: flex;
-  align-items: center;
-  min-height: 400px;
+  height: 22vw;
 
 }
 
-.sec-2
+.headerleftdiv
 {
-  width: 50%; 
-  height: 400px; 
-  margin: 10px;
-  margin-top: 0px;
-  margin-left: 0px;
+  width: 60%; 
+  height: 100%;
+
 }
 
-.aligndiv
+.headerrightdiv
 {
-  margin-top: 8px;
+  width: 40%; 
+  height: 100%; 
 }
 
-.algincat
+.crouselimgadjust
 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  margin-top: 40px;
+  max-height: 22vw;
+  width: 100%;
 }
 
-.card-rating .fa-star 
+
+.headerrightdivimg
 {
-  color: #ffc107;
+  width: 16vw;
+  height:16vw;
+  margin-left: 2vw;
 }
 
 .btnflotdiv
 {
   float: right;
-  margin-right: 125px;
+  margin-right: 6vw;
+}
+
+.divtopmarg
+{
+  margin-top: 4vw;
+}
+
+.card-rating .fa-star 
+{
+  color: #ffc107;
 }
 
 .aboutstyle
@@ -87,9 +99,68 @@
 {
   bottom: 0;
   width: 100%;
-  height: 30px; /* Adjust as per your footer height */
+  height: 30px;
   background-color: black;
-  text-align: center;
   color:white;
-  line-height: 70px;
+  text-align:center;
+}
+
+/*********MediaView***********/
+
+@media screen and (max-width: 1005px){
+  
+  .headerdiv
+  {
+    height: 140vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerleftdiv
+  {
+    height: 100%;
+    width: 100%;
+  }
+
+  .headerrightdiv
+  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .headerrightdivimg
+  {
+    width: 40vw;
+    height:40vw;
+    margin-left: 4vw;
+  }
+
+  .crouselimgadjust
+  {
+    max-height: 100%;
+    width: 100%;
+  }
+  .catdivalign
+  {
+    max-width: 100%;
+  }
+
+  .display
+  {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .btnflotdiv
+  {
+    margin-right: 5vw;
+  }
+
 }
