@@ -24,12 +24,6 @@
   --_p: 100%
 }
 
-
-.nav
-{
-  width: 100vw;
-}
-
 .headerdiv
 {
   margin: 1vw;
@@ -43,7 +37,6 @@
 {
   width: 60%; 
   height: 100%;
-
 }
 
 .headerrightdiv
@@ -111,7 +104,7 @@
   
   .headerdiv
   {
-    height: 140vw;
+    height: 90vw;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -119,13 +112,13 @@
 
   .headerleftdiv
   {
-    height: 100%;
+    height: 40vw;
     width: 100%;
   }
 
   .headerrightdiv
   {
-    height: 100%;
+    height: 70vw;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -138,6 +131,7 @@
     width: 40vw;
     height:40vw;
     margin-left: 4vw;
+
   }
 
   .crouselimgadjust
@@ -162,5 +156,6 @@
   {
     margin-right: 5vw;
   }
+  
 
 }

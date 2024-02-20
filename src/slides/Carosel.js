@@ -1,8 +1,5 @@
 import React from 'react'
 import { Carousel } from 'bootstrap'
-import cr1 from '../Images/crousel Images/the-indian-fashion-crousel1.png'
-// import cr2 from '../Images/crousel Images/perfume-crousel2.png'
-// import cr3 from '../Images/crousel Images/cruosel4.png'
 import singM from '../Images/crousel Images/menpos.png'
 import singW from '../Images/crousel Images/womenpose.png'
 
@@ -15,14 +12,11 @@ export default function Carosel() {
         <div id="carouselExampleAutoplaying" className="carousel slide headerleftdiv" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                <img src={cr1} className="d-block crouselimgadjust" alt="img1"/>
-                </div>
-                {/* <div className="carousel-item active">
-                <img src={cr2} className="d-block crouselimgadjust" alt="img2"/>
+                <img src="https://www.sliderrevolution.com/wp-content/uploads/2023/06/fashion-shop-header-slider-for-wordpress.gif" className="d-block crouselimgadjust" alt="img1"/>
                 </div>
                 <div className="carousel-item active">
-                <img src={cr3} className="d-block crouselimgadjust" alt="img3"/>
-                </div> */}
+                <img src="https://www.sliderrevolution.com/wp-content/uploads/2023/06/fashion-shop-slider.gif" className="d-block crouselimgadjust" alt="img2"/>
+                </div>
                 
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
