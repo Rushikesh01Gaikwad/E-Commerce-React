@@ -9,34 +9,43 @@ import Fashions from './shopdives/Fashions';
 import Jwellery from './shopdives/Jwellery';
 import Aboutus from './footer/Aboutus';
 import Footer from './footer/Footer';
-import Sidebar from './slides/Sidebar';
-import Popus from './popups/Popus';
-import Locationsidebar from './sidebarcontents/Locationsidebar';
+import TodayDealssidebar from './sidebarcontents/TodayDealssidebar';
 import Bestsellersidebar from './sidebarcontents/Bestsellersidebar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Fashionssidebar from './sidebarcontents/Fashionssidebar';
+import Giftideassidebar from './sidebarcontents/Giftideassidebar';
+import Locationsidebar from './sidebarcontents/Locationsidebar';
+import Menssidebar from './sidebarcontents/Menssidebar';
+import Womenssidebar from './sidebarcontents/Womenssidebar';
+import Cartsidebar from './sidebarcontents/Cartsidebar';
+import SignInPopup from './popups/SignInPopup';
+import LangPopup from './popups/LangPopup';
+//import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Navbar></Navbar>
-        <Sidebar></Sidebar>
-        <Header></Header>
-        <Carosel></Carosel>
-        <Popus></Popus>
-        <CatagoryListDiv></CatagoryListDiv>
-        <LastArrival></LastArrival>
-        <Fashions></Fashions>
-        <Jwellery></Jwellery>
-        <Aboutus></Aboutus>
-        <Footer></Footer>
-        <Routes>
-          <Route path='/location' element={<Locationsidebar></Locationsidebar>}></Route>
-          <Route path='/BestSeller' element={<Bestsellersidebar></Bestsellersidebar>}></Route>
-        </Routes>
-      </BrowserRouter>
-   </>
+        <Navbar/>
+        <Locationsidebar/>
+        <Bestsellersidebar/>
+        <Fashionssidebar/>
+        <Giftideassidebar/>
+        <Menssidebar/>
+        <TodayDealssidebar/>
+        <Womenssidebar/>
+        <Cartsidebar/>
+        <SignInPopup/>
+        <LangPopup/>
+        <Header/>
+        <Carosel/>
+        <CatagoryListDiv/>
+        <LastArrival/>
+        <Fashions/>
+        <Jwellery/>
+        <Aboutus/>
+        <Footer/>
+
+      </>
   );
 }
 

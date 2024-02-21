@@ -2,7 +2,6 @@ import React from "react";
 import logo from "../Images/logo/mitraalogoo.png";
 
 
-
 export default function Navbar() {
 
   const name='locbtn'
@@ -36,7 +35,7 @@ export default function Navbar() {
                 className="btn btn-light font-weight-bold mx-2 my-3"
                 data-bs-toggle="button"
                 data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasWithBothOptions"
+                data-bs-target="#offcanvasWithBothOptionsone"
                 aria-controls="offcanvasWithBothOptions"
               >
                 Location
@@ -81,7 +80,7 @@ export default function Navbar() {
             className="btn btn-light mx-2 my-3"
             data-bs-toggle="button"
             data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"
+            data-bs-target="#staticBackdroplang"
           >
             🔤Language
           </button>
@@ -90,7 +89,7 @@ export default function Navbar() {
             className="btn btn-light mx-2 my-3"
             data-bs-toggle="button"
             data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"
+            data-bs-target="#staticBackdropsignin"
           >
             👤Sign in
           </button>
@@ -98,6 +97,9 @@ export default function Navbar() {
             type="button"
             className="btn btn-light mx-2 my-3"
             data-bs-toggle="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptionscart"
+            aria-controls="offcanvasWithBothOptions"
           >
             🛒Cart
           </button>
