@@ -30,7 +30,7 @@ export default function Carosel() {
         </div>
         <div className="headerrightdiv">
             <section style={{marginLeft:"1vw"}}>
-                <h3>Under 700 | Combo Pack | Multiple Brand & Much More...</h3>
+                <h3>Under 700 | Combo Pack | Multiple Brand {"&"} Much More...</h3>
                 <div>
                     <img src={singM} alt="offerimg" className="headerrightdivimg"></img>
                     <img src={singW} alt="offerimg" className="headerrightdivimg"></img><br/>

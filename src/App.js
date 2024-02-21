@@ -18,6 +18,7 @@ import Menssidebar from './sidebarcontents/Menssidebar';
 import Womenssidebar from './sidebarcontents/Womenssidebar';
 import Cartsidebar from './sidebarcontents/Cartsidebar';
 import SignInPopup from './popups/SignInPopup';
+import SignupPopup from './popups/SignupPopup';
 import LangPopup from './popups/LangPopup';
 //import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -35,6 +36,7 @@ function App() {
         <Womenssidebar/>
         <Cartsidebar/>
         <SignInPopup/>
+        <SignupPopup/>
         <LangPopup/>
         <Header/>
         <Carosel/>

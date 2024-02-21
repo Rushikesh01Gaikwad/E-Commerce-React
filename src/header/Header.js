@@ -61,7 +61,7 @@ export default function Header() {
         >
           <h6>Fashion</h6>
         </button>
-
+        
         <p className="ms-auto"></p>
         <h6>New Launches Mobiles, Electronics {"&"} more |</h6>
         <button type="button" className="btn hover">

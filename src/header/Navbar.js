@@ -10,8 +10,7 @@ export default function Navbar() {
     <div>
       <nav
         className="navbar navbar-expand-lg"
-        style={{ backgroundColor: "#009698" }}
-      >
+        style={{ backgroundColor: "#009698" }}>
         <div className="container-fluid">
           <a className="navbar-brand">
             <img className="complogo my-3" src={logo} alt=""></img>
