@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Findmore() {
   return (
@@ -9,11 +10,11 @@ export default function Findmore() {
                 <div className="col">
                     <div className="card h-100">
                     <img src="https://time.com/shopping/static/0c32680c03cc78809aed224662f22823/57e17/best-mens-jewelry-brands.jpg" className="card-img-top" alt="..."/>
-                    <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                    <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
                         <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                             <span className="card-title"><h5>Men's Jwellery</h5></span>
                         </div>
-                    </button>
+                    </Link>
                     <div className="card-footer">
                         <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                     </div>
@@ -25,11 +26,11 @@ export default function Findmore() {
                 <div className="col">
                     <div className="card h-100">
                     <img src="https://www.caratlane.com/blog/wp-content/uploads/2022/12/Diwali-product-shoot-sys-20028-2.jpg" className="card-img-top" alt="..."/>
-                    <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                    <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
                         <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                             <span className="card-title"><h5>Women's Jwellery</h5></span>
                         </div>
-                    </button>
+                    </Link>
                     <div className="card-footer">
                         <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                     </div>

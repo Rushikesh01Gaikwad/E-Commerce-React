@@ -2,19 +2,17 @@ import React from 'react'
 import img from '../Images/crousel Images/dupliimg.png'
 import { Link } from 'react-router-dom'
 
-export default function Divtechmode() {
+export default function Viewcard() {
   return (
     <div className="container">
-        <div className="divtopmarg">
-        <h4><b>Fashions </b></h4>
         <br/>
-        <div className="row row-cols-1 row-cols-md-4 g-4">
+        <div className="row row-cols-1 row-cols-md-3 g-4">
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <Link type="Link" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Hat</h5></span>
+                        <span className="card-title"><h5>Kurta's</h5></span>
                     </div>
                 </Link>
                 <div className="card-footer">
@@ -28,9 +26,9 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <Link type="Link" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Flip Flop</h5></span>
+                        <span className="card-title"><h5>Shirts</h5></span>
                     </div>
                 </Link>
                 <div className="card-footer">
@@ -44,9 +42,9 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <Link type="Link" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Shoes</h5></span>
+                        <span className="card-title"><h5>Geans</h5></span>
                     </div>
                 </Link>
                 <div className="card-footer">
@@ -60,7 +58,23 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <Link type="Link" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
+                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
+                        <span className="card-title"><h5>Shorts</h5></span>
+                    </div>
+                </Link>
+                <div className="card-footer">
+                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
+                </div>
+                <div className="card-footer">
+                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
+                </div>
+                </div>
+            </div>
+            <div className="col">
+                <div className="card h-100">
+                <img src={img} className="card-img-top" alt="..."/>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                         <span className="card-title"><h5>Goggles</h5></span>
                     </div>
@@ -76,9 +90,9 @@ export default function Divtechmode() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <Link type="Link" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Makup kit</h5></span>
+                        <span className="card-title"><h5>watches</h5></span>
                     </div>
                 </Link>
                 <div className="card-footer">
@@ -88,55 +102,6 @@ export default function Divtechmode() {
                     <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
                 </div>
                 </div>
-            </div>
-            <div className="col">
-                <div className="card h-100">
-                <img src={img} className="card-img-top" alt="..."/>
-                <Link type="Link" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
-                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Keychains</h5></span>
-                    </div>
-                </Link>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
-                </div>
-                </div>
-            </div>
-            <div className="col">
-                <div className="card h-100">
-                <img src={img} className="card-img-top" alt="..."/>
-                <Link type="Link" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
-                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Showpiece</h5></span>
-                    </div>
-                </Link>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
-                </div>
-                </div>
-            </div>
-            <div className="col">
-                <div className="card h-100">
-                <img src={img} className="card-img-top" alt="..."/>
-                <Link type="Link" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
-                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Swetors</h5></span>
-                    </div>
-                </Link>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
-                </div>
-                </div>
-            </div>
             </div>
         </div>
     </div>

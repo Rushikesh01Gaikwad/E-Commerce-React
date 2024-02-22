@@ -84,11 +84,37 @@
   color: #ffc107;
 }
 
+.adjustmainproductimg
+{
+  height: 22vw;
+  width: 20vw;
+}
+
+.maincarddiv
+{
+
+  display: flex;
+  height: 20vw;
+}
+
+.sizeadjustdivmaincard
+{
+  width: 50%;
+}
+
+.adjustrightcontaintmainimg
+{
+  margin-left: 2vw;
+
+}
+
 .aboutstyle
 {
   background-color: rgb(191, 201, 202);
   width: 100%;
   margin-top: 5px;
+  bottom: 0;
+  position: fix;
 }
 
 .iconsizes
@@ -105,6 +131,7 @@
   background-color: black;
   color:white;
   text-align:center;
+  position: fix;
 }
 
 /*********MediaView***********/
@@ -164,6 +191,26 @@
   .btnflotdiv
   {
     margin-right: 5vw;
+  }
+
+  .adjustmainproductimg
+  {
+    height: 30vw;
+    width: 30vw;
+  }
+
+  .sizeadjustdivmaincard
+  {
+   width: 100%;
+   display: grid;
+   place-items: center;
+  }
+
+  .maincarddiv
+  {
+   display: flex;
+   flex-direction: column;
+   height: 45vw;
   }
 
 }

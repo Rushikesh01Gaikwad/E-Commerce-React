@@ -9,7 +9,7 @@ export default function Fashionssidebar() {
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
-          <h3>This is the Fashions Side bar containt</h3>
+          <h3></h3>
         </div>
       </div>
     </div>

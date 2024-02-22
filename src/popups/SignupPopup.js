@@ -1,4 +1,5 @@
 import React from 'react'
+import usericon from '../Images/icons/usericon.png'
 
 export default function SignupPopup() {
   return (
@@ -11,9 +12,9 @@ export default function SignupPopup() {
                 <h1 className="modal-title fs-5" id="staticBackdropLabel"><h4>Sign Up</h4></h1>
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            {/* <div className="text-center">
+            <div className="text-center">
               <img src={usericon} className="usericonlogo" alt="login user"/>
-            </div> */}
+            </div>
             <div className="modal-body">
             <form>
               <div className="mb-3">

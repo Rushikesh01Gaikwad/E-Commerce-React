@@ -1,6 +1,6 @@
 import React from 'react'
 import usericon from '../Images/icons/usericon.png'
-import SignupPopup from '../popups/SignupPopup';
+
 
 export default function SignInPopup() {
 

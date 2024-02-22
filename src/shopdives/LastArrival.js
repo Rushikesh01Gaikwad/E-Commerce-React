@@ -1,5 +1,6 @@
 import React from 'react'
 import img from '../Images/crousel Images/dupliimg.png'
+import { Link } from 'react-router-dom'
 
 export default function LastArrival() {
   return (
@@ -11,11 +12,11 @@ export default function LastArrival() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                         <span className="card-title"><h5>Kurta's</h5></span>
                     </div>
-                </button>
+                </Link>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -27,11 +28,11 @@ export default function LastArrival() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                         <span className="card-title"><h5>Shirts</h5></span>
                     </div>
-                </button>
+                </Link>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -43,11 +44,11 @@ export default function LastArrival() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                         <span className="card-title"><h5>Geans</h5></span>
                     </div>
-                </button>
+                </Link>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -59,11 +60,11 @@ export default function LastArrival() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                         <span className="card-title"><h5>Shorts</h5></span>
                     </div>
-                </button>
+                </Link>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -75,11 +76,11 @@ export default function LastArrival() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                         <span className="card-title"><h5>Goggles</h5></span>
                     </div>
-                </button>
+                </Link>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
@@ -91,11 +92,11 @@ export default function LastArrival() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <button type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}}>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                         <span className="card-title"><h5>watches</h5></span>
                     </div>
-                </button>
+                </Link>
                 <div className="card-footer">
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
                 </div>
