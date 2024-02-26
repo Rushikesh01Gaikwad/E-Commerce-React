@@ -1,109 +1,44 @@
-import React from 'react'
-import img from '../Images/crousel Images/dupliimg.png'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
-export default function Viewcard() {
-  return (
-    <div className="container">
-        <br/>
-        <div className="row row-cols-1 row-cols-md-3 g-4">
-            <div className="col">
-                <div className="card h-100">
-                <img src={img} className="card-img-top" alt="..."/>
-                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
-                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Kurta's</h5></span>
+export class Viewcards extends Component {
+  render() {
+
+    let {title, description, image, rating, price} =this.props;
+
+
+    return (
+        <div className="container display">
+            <div className="divtopmarg">
+                <div className="my-3">
+                        <div className="card" style={{width:"18rem"}}>
+                        <img src={image} className="card-img-top" alt="..."/>
+                        <Link  type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/Mainproduct'>
+                            <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
+                                <span className="card-title"><h5>{title}</h5></span>
+                            </div></Link>
+                            <div className="card-footer">
+                            <small className="text-body-secondary">{description}...</small>
+                            </div>
+                            <div className="card-footer">
+                            <small className="text-body-secondary"><b>Rating: {rating} </b></small>
+                            </div>
+                            <div className="card-footer">
+                                <small className="text-body-secondary"><del>$35.90</del> <b>{"$"}{price}</b></small>
+                            </div>
                     </div>
-                </Link>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
-                </div>
-                </div>
-            </div>
-            <div className="col">
-                <div className="card h-100">
-                <img src={img} className="card-img-top" alt="..."/>
-                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
-                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Shirts</h5></span>
-                    </div>
-                </Link>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
-                </div>
-                </div>
-            </div>
-            <div className="col">
-                <div className="card h-100">
-                <img src={img} className="card-img-top" alt="..."/>
-                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
-                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Geans</h5></span>
-                    </div>
-                </Link>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
-                </div>
-                </div>
-            </div>
-            <div className="col">
-                <div className="card h-100">
-                <img src={img} className="card-img-top" alt="..."/>
-                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
-                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Shorts</h5></span>
-                    </div>
-                </Link>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
-                </div>
-                </div>
-            </div>
-            <div className="col">
-                <div className="card h-100">
-                <img src={img} className="card-img-top" alt="..."/>
-                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
-                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>Goggles</h5></span>
-                    </div>
-                </Link>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
-                </div>
-                </div>
-            </div>
-            <div className="col">
-                <div className="card h-100">
-                <img src={img} className="card-img-top" alt="..."/>
-                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
-                    <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                        <span className="card-title"><h5>watches</h5></span>
-                    </div>
-                </Link>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
-                </div>
-                <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
-                </div>
                 </div>
             </div>
         </div>
-    </div>
-  )
+        
+    )
+  }
 }
+
+export default Viewcards
+
+
+
+
+
+

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function Maincard() {
-  return (
-    <div>
+export class Maincard extends Component {
+  render() {
+
+    return (
+      <div>
       <div className="container divtopmarg maincarddiv">
         <div className="sizeadjustdivmaincard">
           <div className="adjustmainproductimg">
@@ -20,5 +22,8 @@ export default function Maincard() {
         </div>
       </div>
     </div>
-  )
+    )
+  }
 }
+
+export default Maincard

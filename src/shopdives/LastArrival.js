@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import img from '../Images/crousel Images/dupliimg.png'
 import { Link } from 'react-router-dom'
 
-export default function LastArrival() {
-  return (
-      
-    <div className="container divtopmarg">
-        <h4><b>Our latest arrivals</b></h4>
+export class CatagoryListDiv extends Component {
+  render() {
+
+    return (
+        
+      <div className="container">
+        <div className="divtopmarg">
+          <h4><b>Latest Arrivals</b></h4>
         <br/>
         <div className="row row-cols-1 row-cols-md-3 g-4">
             <div className="col">
@@ -60,7 +63,7 @@ export default function LastArrival() {
             <div className="col">
                 <div className="card h-100">
                 <img src={img} className="card-img-top" alt="..."/>
-                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
+                <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/product'>
                     <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                         <span className="card-title"><h5>Shorts</h5></span>
                     </div>
@@ -107,5 +110,12 @@ export default function LastArrival() {
             </div>
         </div>
     </div>
-  )
+    </div>
+      
+    )
+  }
 }
+
+export default CatagoryListDiv
+
+

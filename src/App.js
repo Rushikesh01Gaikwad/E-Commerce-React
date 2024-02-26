@@ -9,7 +9,7 @@ import Aboutus from './footer/Aboutus';
 import Footer from './footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Maincard from './shopdives/Maincard';
-import Viewcards from './shopdives/Viewcards';
+import Apidata from './shopdives/Apidata';
 
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
         <Allpopup/>
         <Routes>
           <Route path='/' element={<Alldives/>}></Route>
-          <Route path='/products' element={<Viewcards/>}></Route>
-          <Route path='/product' element={<Maincard/>}></Route>
+          <Route path='/products' element={<Apidata/>}></Route>
+          <Route path='/Mainproduct' element={<Maincard/>}></Route>
         </Routes>
         <Aboutus/>
         <Footer/>

@@ -6,7 +6,6 @@ export default function CatagoryListDiv() {
   return (
       <div>
           <Carosel/>
-          <button type="button" className="btn btn-outline-dark btnflotdiv" data-bs-toggle="button"><h6>🔎Brand Filters</h6></button>
         <div className="container display">
           <div className="divtopmarg">
           <h4><b>Category List</b></h4>
