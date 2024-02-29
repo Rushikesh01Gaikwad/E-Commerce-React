@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import img from '../Images/crousel Images/dupliimg.png'
 import { Link } from 'react-router-dom'
 
-export class CatagoryListDiv extends Component {
-  render() {
+function CatagoryListDiv() {
 
     return (
         
@@ -114,7 +113,6 @@ export class CatagoryListDiv extends Component {
       
     )
   }
-}
 
 export default CatagoryListDiv
 

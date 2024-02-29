@@ -1,8 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Maincard extends Component {
-  render() {
-
+function Maincard() {
     return (
       <div>
       <div className="container divtopmarg maincarddiv">
@@ -24,6 +22,5 @@ export class Maincard extends Component {
     </div>
     )
   }
-}
 
 export default Maincard

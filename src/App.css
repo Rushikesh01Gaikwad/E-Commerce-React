@@ -108,6 +108,13 @@
 
 }
 
+.sizeimagecard
+{
+  width: 300px;
+  height: 250px;
+  object-fit: contain;
+}
+
 .aboutstyle
 {
   background-color: rgb(191, 201, 202);

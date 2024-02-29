@@ -4,8 +4,6 @@ import logo from "../Images/logo/mitraalogoo.png";
 
 export default function Navbar() {
 
-  const name='locbtn'
-
   return (
     <div>
       <nav
@@ -15,32 +13,7 @@ export default function Navbar() {
           <a className="navbar-brand">
             <img className="complogo my-3" src={logo} alt=""></img>
           </a>
-          <button
-            className="navbar-toggler my-3"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <button
-                id={name}
-                type="button"
-                className="btn btn-light font-weight-bold mx-2 my-3"
-                data-bs-toggle="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasWithBothOptionsone"
-                aria-controls="offcanvasWithBothOptions"
-              >
-                Location
-              </button>
-            </ul>
-            <div className="dropdown mx-3">
+          <div className="dropdown mx-1">
               <button
                 className="btn custom-button dropdown-toggle btn-light my-3"
                 type="button"
@@ -67,8 +40,21 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <button
+                type="button"
+                className="btn btn-light font-weight-bold mx-2 my-3"
+                data-bs-toggle="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptionsone"
+                aria-controls="offcanvasWithBothOptions"
+              >
+                Location
+              </button>
+            </ul>
             <input
-              className="form-control me-2"
+              className="form-control me-2 mx-2"
               type="search"
               placeholder="Search"
               aria-label="Search"

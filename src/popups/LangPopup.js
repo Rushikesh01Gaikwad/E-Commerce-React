@@ -11,15 +11,15 @@ export default function LangPopup() {
                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div className="modal-body">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked/>
-                  <label class="form-check-label" for="flexRadioDefault1">
+                <div className="form-check">
+                  <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked/>
+                  <label className="form-check-label" htmlFor="flexRadioDefault1">
                     <h6>English</h6>
                   </label>
                 </div>
-                {/* <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                  <label class="form-check-label" for="flexRadioDefault2">
+                {/* <div className="form-check">
+                  <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+                  <label className="form-check-label" for="flexRadioDefault2">
 
                   </label>
                 </div> */}
