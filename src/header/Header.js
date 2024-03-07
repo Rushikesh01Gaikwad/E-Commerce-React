@@ -23,7 +23,7 @@ export default function Header() {
           data-bs-target="#offcanvasWithBothOptionsthree"
           aria-controls="offcanvasWithBothOptions"
         >
-          <h6>Today's Deals</h6>
+          <h6>Electronics</h6>
         </button>
         <button
           type="button"
@@ -50,7 +50,7 @@ export default function Header() {
           data-bs-target="#offcanvasWithBothOptionssix"
           aria-controls="offcanvasWithBothOptions"
         >
-          <h6>Gift Ideas</h6>
+          <h6>Jwellery</h6>
         </button>
         <button
           type="button"

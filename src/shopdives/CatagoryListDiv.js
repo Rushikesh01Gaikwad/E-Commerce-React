@@ -45,10 +45,10 @@ export default function CatagoryListDiv() {
               </div>
               <div className="col">
                   <div className="card h-100">
-                  <img src="https://images.unsplash.com/photo-1581841899040-8b5e38bae033?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaWFuJTIwY2hpbGR8ZW58MHx8MHx8fDA%3D" className="card-img-top" alt="..."/>
+                  <img src="https://www.caratlane.com/blog/wp-content/uploads/2022/12/Diwali-product-shoot-sys-20028-2.jpg" className="card-img-top" alt="..."/>
                   <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} to='/products'>
                       <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
-                          <span className="card-title"><h5>Childrens</h5></span>
+                          <span className="card-title"><h5>Jwellery</h5></span>
                       </div>
                   </Link>
                   <div className="card-footer">
