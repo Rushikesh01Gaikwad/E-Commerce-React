@@ -7,14 +7,13 @@ function Viewcards(props) {
 
     const handleonclick=()=>
     {
-       return (
        <Maincard prodId = {props.id}
        prodTitle = {props.title}
        prodPrice = {props.price}
        prodRating = {props.rating}
        prodImg = {props.image}
        prodDesc = {props.description}
-        />)
+        />
     }
 
     return (
@@ -24,7 +23,7 @@ function Viewcards(props) {
                 <div className="my-2">
                         <div className="card" style={{width:"18rem"}}>
                         <img src={props.image} className="card-img-top sizeimagecard" alt="..."/>
-                        <Link  Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} onClick={handleonclick} to='/Mainproduct' >
+                        <Link type="button" className="btn" style={{backgroundColor:"#009698", borderRadius:'0px'}} onClick={handleonclick} to='/Mainproduct' >
                             <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                                 <span className="card-title"><h5>{props.title}...</h5></span>
                             </div></Link>

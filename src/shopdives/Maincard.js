@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Maincard=(props)=> {
+const Maincard=({prodTitle})=> {
 
-  let { prodTitle } = props;
+  console.log(prodTitle)
 
     return (
       <div>
