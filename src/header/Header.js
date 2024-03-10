@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -16,42 +17,34 @@ export default function Header() {
         >
           <h6>Best Sellers</h6>
         </button>
-        <button
+        <Link
           type="button"
           className="btn hover"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptionsthree"
-          aria-controls="offcanvasWithBothOptions"
+          to='/elctroncat'
         >
           <h6>Electronics</h6>
-        </button>
-        <button
+        </Link>
+        <Link
           type="button"
           className="btn hover"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptionsfour"
-          aria-controls="offcanvasWithBothOptions"
+          to='/menscat'
         >
           <h6>Men's</h6>
-        </button>
-        <button
+        </Link>
+        <Link
           type="button"
           className="btn hover"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptionsfive"
-          aria-controls="offcanvasWithBothOptions"
+          to='/womencat'
         >
           <h6>Women's</h6>
-        </button>
-        <button
+        </Link>
+        <Link
           type="button"
           className="btn hover"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptionssix"
-          aria-controls="offcanvasWithBothOptions"
+          to='/jwellerycat'
         >
           <h6>Jwellery</h6>
-        </button>
+        </Link>
         <button
           type="button"
           className="btn hover"

@@ -10,6 +10,10 @@ import Footer from './footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Maincard from './shopdives/Maincard';
 import Apidata from './shopdives/Apidata';
+import Menscatagory from './Catagories/Menscatagory';
+import Womenscatagory from './Catagories/Womenscatagory';
+import Electronicscat from './Catagories/Electrocatagory';
+import Jwellerycatagory from './Catagories/Jwellerycatagory';
 
 
 function App() {
@@ -22,6 +26,10 @@ function App() {
         <Allpopup/>
         <Routes>
           <Route path='/' element={<Alldives/>}></Route>
+          <Route path='/menscat' element={<Menscatagory/>}></Route>
+          <Route path='/womencat' element={<Womenscatagory/>}></Route>
+          <Route path='/elctroncat' element={<Electronicscat/>}></Route>
+          <Route path='/jwellerycat' element={<Jwellerycatagory/>}></Route>
           <Route path='/products' element={<Apidata/>}></Route>
           <Route path='/Mainproduct' element={<Maincard/>}></Route>
         </Routes>

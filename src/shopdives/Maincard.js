@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Maincard=({prodTitle})=> {
-
-  console.log(prodTitle)
+const Maincard=(props)=> {
+  let id = props.Id
+  console.log(id)
 
     return (
       <div>
@@ -13,7 +13,7 @@ const Maincard=({prodTitle})=> {
             </div>
           </div>
           <div className="adjustrightcontaintmainimg">
-            <h3>{prodTitle}</h3>
+            <h3></h3>
             <span style={{color:'green'}}>Special offer</span>
             <div style={{display:'flex'}}>
               <h4>description</h4>
