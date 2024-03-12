@@ -8,40 +8,39 @@ export default function Header() {
         <label>
           <h6>All ➡️</h6>
         </label>
-        <button
-          type="button"
-          className="btn hover"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptionstwo"
-          aria-controls="offcanvasWithBothOptions"
-        >
-          <h6>Best Sellers</h6>
-        </button>
         <Link
           type="button"
           className="btn hover"
-          to='/elctroncat'
+          to='/'
+          
+        >
+          <h6>Home</h6>
+        </Link>
+        <Link
+          type="button"
+          className="btn hover"
+          to='/elctronics'
         >
           <h6>Electronics</h6>
         </Link>
         <Link
           type="button"
           className="btn hover"
-          to='/menscat'
+          to='/mens'
         >
           <h6>Men's</h6>
         </Link>
         <Link
           type="button"
           className="btn hover"
-          to='/womencat'
+          to='/women'
         >
           <h6>Women's</h6>
         </Link>
         <Link
           type="button"
           className="btn hover"
-          to='/jwellerycat'
+          to='/jwellery'
         >
           <h6>Jwellery</h6>
         </Link>

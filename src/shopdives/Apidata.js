@@ -8,7 +8,6 @@ function Apidata() {
         
       <div>
         <div className="container my-3">
-        <button type="button" className="btn btn-outline-success font-weight-bold mx-3 my-3" data-bs-toggle="button"><h6>Filter</h6></button>
             <div className="row">
             {articlesjson.map((element) => {
               return (

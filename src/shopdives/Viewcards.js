@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Maincard from './Maincard';
 
 
 function Viewcards(props) {
 
-    let Handleonclick = () => <Maincard Id={props.id} />;
+    let Handleonclick = () => 
+    {
+        console.log(props.id)
+    }
 
     
 
@@ -28,7 +30,7 @@ function Viewcards(props) {
                             <small className="text-body-secondary"><b>Rating: {props.rating} </b></small>
                             </div>
                             <div className="card-footer">
-                                <small className="text-body-secondary"><del>$35.90</del> <b>{"$"}{props.price}</b></small>
+                                <small className="text-body-secondary"><b>{"₹ "}{props.price}</b></small>
                             </div>
                     </div>
                 </div>

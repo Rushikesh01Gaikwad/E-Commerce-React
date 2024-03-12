@@ -14,7 +14,14 @@ import Menscatagory from './Catagories/Menscatagory';
 import Womenscatagory from './Catagories/Womenscatagory';
 import Electronicscat from './Catagories/Electrocatagory';
 import Jwellerycatagory from './Catagories/Jwellerycatagory';
-
+import Flipflop from './Catagories/Flipflop';
+import Goggles from './Catagories/Goggles';
+import Hatcat from './Catagories/Hatcat';
+import Keychain from './Catagories/Keychain';
+import Makupkit from './Catagories/Makupkit';
+import Shoes from './Catagories/Shoes';
+import Showpiece from './Catagories/Showpiece';
+import Swetors from './Catagories/Swetors';
 
 function App() {
   return (
@@ -26,10 +33,18 @@ function App() {
         <Allpopup/>
         <Routes>
           <Route path='/' element={<Alldives/>}></Route>
-          <Route path='/menscat' element={<Menscatagory/>}></Route>
-          <Route path='/womencat' element={<Womenscatagory/>}></Route>
-          <Route path='/elctroncat' element={<Electronicscat/>}></Route>
-          <Route path='/jwellerycat' element={<Jwellerycatagory/>}></Route>
+          <Route path='/mens' element={<Menscatagory/>}></Route>
+          <Route path='/women' element={<Womenscatagory/>}></Route>
+          <Route path='/elctronics' element={<Electronicscat/>}></Route>
+          <Route path='/jwellery' element={<Jwellerycatagory/>}></Route>
+          <Route path='/flipflop' element={<Flipflop/>}></Route>
+          <Route path='/hat' element={<Hatcat/>}></Route>
+          <Route path='/Goggles' element={<Goggles/>}></Route>
+          <Route path='/Keycains' element={<Keychain/>}></Route>
+          <Route path='/makupkits' element={<Makupkit/>}></Route>
+          <Route path='/shoes' element={<Shoes/>}></Route>
+          <Route path='/showpiece' element={<Showpiece/>}></Route>
+          <Route path='/swetors' element={<Swetors/>}></Route>
           <Route path='/products' element={<Apidata/>}></Route>
           <Route path='/Mainproduct' element={<Maincard/>}></Route>
         </Routes>

@@ -2,21 +2,20 @@ import React, { useState, useEffect } from 'react'
 import articlejson from '../articles.json'
 import { Link } from 'react-router-dom';
 
-export default function Womenscatagory() {
+export default function Flipflop() {
 
-  const[data, setData]=useState(articlejson);
-  useEffect(() => {
-    // Filter the data by 'electronics' category when component mounts
-    const result = articlejson.filter(item => item.category === "women's clothing");
-    setData(result);
-  }, []);
+    const[data, setData]=useState(articlejson);
+    useEffect(() => {
+      // Filter the data by 'electronics' category when component mounts
+      const result = articlejson.filter(item => item.category === 'flipflop');
+      setData(result);
+    }, []);
 
   return (
     <div>
-      <button type="button" className="btn btn-outline-success font-weight-bold mx-3 my-3" data-bs-toggle="button" style={{float:'right'}}><h6>Filter</h6></button>
       <div className='container display'>
       <div style={{marginTop:"2vw"}}>
-      <h4><b>Women </b></h4>
+      <h4><b>Flip Flops </b></h4>
         <div className='row' style={{marginTop:"2vw"}}>
           {data.map((values)=>{
             return(
