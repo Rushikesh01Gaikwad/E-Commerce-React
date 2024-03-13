@@ -43,17 +43,7 @@ export default function Header() {
           to='/jwellery'
         >
           <h6>Jwellery</h6>
-        </Link>
-        <button
-          type="button"
-          className="btn hover"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptionsseven"
-          aria-controls="offcanvasWithBothOptions"
-        >
-          <h6>Fashion</h6>
-        </button>
-        
+        </Link> 
         <p className="ms-auto"></p>
         <h6>New Launches Mobiles, Electronics {"&"} more |</h6>
         <button type="button" className="btn hover">

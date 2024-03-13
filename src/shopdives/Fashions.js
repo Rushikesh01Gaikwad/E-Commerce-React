@@ -17,7 +17,7 @@ export default function Divtechmode() {
                     </div>
                 </Link>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
+                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
                     <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
@@ -33,7 +33,7 @@ export default function Divtechmode() {
                     </div>
                 </Link>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
+                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
                     <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
@@ -49,7 +49,7 @@ export default function Divtechmode() {
                     </div>
                 </Link>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
+                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
                     <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
@@ -65,7 +65,7 @@ export default function Divtechmode() {
                     </div>
                 </Link>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
+                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
                     <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
@@ -81,7 +81,7 @@ export default function Divtechmode() {
                     </div>
                 </Link>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
+                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
                     <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
@@ -97,7 +97,7 @@ export default function Divtechmode() {
                     </div>
                 </Link>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
+                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
                     <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
@@ -113,7 +113,7 @@ export default function Divtechmode() {
                     </div>
                 </Link>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
+                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
                     <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
@@ -129,7 +129,7 @@ export default function Divtechmode() {
                     </div>
                 </Link>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰ (679)</small>
+                    <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
                     <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>

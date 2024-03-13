@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+import {addItem} from '../slices/CartSlice'
 
 
 function Viewcards(props) {
+
+    const dispatch = useDispatch();
 
     let Handleonclick = () => 
     {
@@ -27,11 +31,12 @@ function Viewcards(props) {
                             <small className="text-body-secondary">{props.description}...</small>
                             </div>
                             <div className="card-footer">
-                            <small className="text-body-secondary"><b>Rating: {props.rating} </b></small>
+                            <small className="text-body-secondary"><b>Rating: {props.rating}</b></small>
+                            <small style={{float:'right'}}><b>{" Rupees ₹ "}{props.price}</b></small>
                             </div>
-                            <div className="card-footer">
-                                <small className="text-body-secondary"><b>{"₹ "}{props.price}</b></small>
-                            </div>
+                            <button className="card-footer container btn" onClick={e=>dispatch(addItem({name:props.title, price:props.price}))}>
+                            <b>Add to cart</b>
+                            </button> 
                     </div>
                 </div>
             </div>

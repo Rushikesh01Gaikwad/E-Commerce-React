@@ -28,13 +28,12 @@ export default function Carosel() {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
-        <div className="headerrightdiv">
+        <div>
             <section style={{marginLeft:"1vw"}}>
                 <h3>Under 700 | Combo Pack | Multiple Brand {"&"} Much More...</h3>
                 <div>
                     <img src={singM} alt="offerimg" className="headerrightdivimg"></img>
                     <img src={singW} alt="offerimg" className="headerrightdivimg"></img><br/>
-                    <button type="button" className="btn btn-outline-dark mx-3 my-3" data-bs-toggle="button"><h6>See All Offers</h6></button>
                 </div>
             </section>
         </div>
