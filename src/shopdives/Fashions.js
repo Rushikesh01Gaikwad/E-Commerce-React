@@ -20,7 +20,7 @@ export default function Divtechmode() {
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
+                    <small><b>{" Rupees ₹ "}699</b></small>
                 </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@ export default function Divtechmode() {
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
+                    <small><b>{" Rupees ₹ "}599</b></small>
                 </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ export default function Divtechmode() {
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
+                    <small><b>{" Rupees ₹ "}499</b></small>
                 </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@ export default function Divtechmode() {
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
+                    <small><b>{" Rupees ₹ "}399</b></small>
                 </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@ export default function Divtechmode() {
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
+                    <small><b>{" Rupees ₹ "}399</b></small>
                 </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@ export default function Divtechmode() {
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
+                    <small><b>{" Rupees ₹ "}599</b></small>
                 </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@ export default function Divtechmode() {
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
+                    <small><b>{" Rupees ₹ "}399</b></small>
                 </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@ export default function Divtechmode() {
                     <small className="text-body-secondary"><b>Rating:</b> ⭐⭐⭐⭐✰</small>
                 </div>
                 <div className="card-footer">
-                    <small className="text-body-secondary"><del>$35.90</del> <b>$40.89</b></small>
+                    <small><b>{" Rupees ₹ "}499</b></small>
                 </div>
                 </div>
             </div>

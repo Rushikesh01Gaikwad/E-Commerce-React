@@ -53,12 +53,12 @@ export default function Navbar() {
                 Location
               </button>
             </ul>
-            <input
-              className="form-control me-2 mx-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
+            <textarea
+              className="form-control"
+              id="mybox"
+              placeholder="Search here"
+              rows="1"
+            ></textarea>
           </div>
           <button
             type="button"

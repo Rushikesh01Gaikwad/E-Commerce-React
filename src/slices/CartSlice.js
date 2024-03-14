@@ -10,6 +10,10 @@ const cartSlice = createSlice(
             {
                 state.push(action.payload);
             },
+            mainCard:(state, action)=>
+            {
+                state.push(action.payload)
+            }
         },
     }
 );
@@ -17,5 +21,6 @@ const cartSlice = createSlice(
 export const getItemSelector = createSelector((state) => state.cart, (state)=>state)
 
 export const {addItem} = cartSlice.actions;
+export const {mainCard}= cartSlice.actions;
 
 export default cartSlice.reducer;

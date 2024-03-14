@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import articlejson from '../articles.json'
 import { Link } from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+import {addItem} from '../slices/CartSlice'
 
 export default function Womenscatagory() {
+
+  const dispatch = useDispatch();
 
   const[data, setData]=useState(articlejson);
   useEffect(() => {
@@ -13,11 +17,10 @@ export default function Womenscatagory() {
 
   return (
     <div>
-      <button type="button" className="btn btn-outline-success font-weight-bold mx-3 my-3" data-bs-toggle="button" style={{float:'right'}}><h6>Filter</h6></button>
       <div className='container display'>
       <div style={{marginTop:"2vw"}}>
       <h4><b>Women </b></h4>
-        <div className='row' style={{marginTop:"2vw"}}>
+        <div className='row catlist3rddiv' style={{marginTop:"2vw"}}>
           {data.map((values)=>{
             return(
               <>
@@ -33,11 +36,12 @@ export default function Womenscatagory() {
                         <small className="text-body-secondary">{values.description.slice(0, 40)}...</small>
                       </div>
                       <div className="card-footer">
-                        <small className="text-body-secondary"><b>Rating: {values.rating.rate} </b></small>
+                        <small className="text-body-secondary"><b>Rating: {values.rating.rate}</b></small>
+                        <small style={{float:'right'}}><b>{" Rupees ₹ "}{values.price}</b></small>
                       </div>
-                      <div className="card-footer">
-                        <small className="text-body-secondary"><b>{"₹ "}{values.price}</b></small>
-                      </div>      
+                      <button className="card-footer container btn" onClick={e=>dispatch(addItem({name:values.title, price:values.price}))}>
+                        <b>Add to cart</b>
+                      </button>      
                   </div>
                 </div>
               </div>

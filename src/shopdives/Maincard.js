@@ -1,8 +1,6 @@
 import React from 'react'
 
-const Maincard=(props)=> {
-  let id = props.Id
-  console.log(id)
+const Maincard=()=> {
 
     return (
       <div>

@@ -109,6 +109,11 @@
   object-fit: contain;
 }
 
+.catlist2nddiv
+{
+  margin: 1vw;
+  display: flex;
+}
 
 .aboutstyle
 {
@@ -157,6 +162,15 @@
   .headerrightdiv
   {
     height: 70vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .catlist3rddiv
+  {
     width: 100%;
     display: flex;
     flex-direction: column;

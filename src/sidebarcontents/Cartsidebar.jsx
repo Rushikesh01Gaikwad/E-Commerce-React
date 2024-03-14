@@ -7,7 +7,6 @@ export default function Cartsidebar() {
   const items = useSelector(getItemSelector);
   const total = items.reduce((a, b)=> a + b.price, 0)
   
-  console.log("items", items)
 
   return (
     <div>

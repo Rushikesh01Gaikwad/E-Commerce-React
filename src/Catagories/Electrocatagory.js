@@ -18,21 +18,24 @@ export default function Electrocatagory() {
 
   return (
     <div>
-      <div className='container display catgoryLists1stdiv'>
+      <div className='container display'>
       <div style={{marginTop:"2vw"}}>
       <h4><b>Electronics gadget </b></h4>
-          <div className='row' style={{marginTop:"2vw"}}>
+          <div className='row catlist3rddiv' style={{marginTop:"2vw"}}>
             {data.map((values)=>{
               return(
                 <>
                 <div className='col-md-4 mb-4' key={values.id}>
-                  <div className='my-2'>
+                  <div className='my-2 '>
+                  
+
                     <div className="card" style={{width:"18rem"}}>
                     <img src={values.image} className="card-img-top sizeimagecard" alt="..."/>
                     <Link type="button" className="btn" style={{backgroundColor:"#009698",borderRadius:'0px'}} to='/Mainproduct'>
                         <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                           <span className="card-title"><h5>{values.title.slice(0,40)}...</h5></span>
                         </div></Link>
+                        {/* <span class="position-absolute top-0 translate-middle badge rounded-pill text-bg-success" style={{left:'90%', zIndex:'1%'}}> Added to cart </span> */}
                         <div className="card-footer">
                           <small className="text-body-secondary">{values.description.slice(0, 40)}...</small>
                         </div>
