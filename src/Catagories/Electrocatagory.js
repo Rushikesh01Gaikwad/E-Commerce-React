@@ -3,6 +3,8 @@ import articlejson from '../articles.json'
 import { Link } from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 import {addItem} from '../slices/CartSlice'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Electrocatagory() {
 
@@ -15,6 +17,20 @@ export default function Electrocatagory() {
     const result = articlejson.filter(item => item.category === 'electronics');
     setData(result);
   }, []);
+
+  const notify=()=>
+  {
+    toast.success('Item added successfully', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
 
   return (
     <div>
@@ -43,9 +59,12 @@ export default function Electrocatagory() {
                           <small className="text-body-secondary"><b>Rating: {values.rating.rate}</b></small>
                           <small style={{float:'right'}}><b>{" Rupees ₹ "}{values.price}</b></small>
                         </div>
+                        <span onClick={notify}>
                         <button className="card-footer container btn" onClick={e=>dispatch(addItem({name:values.title, price:values.price}))}>
+
                             <b>Add to cart</b>
-                        </button>      
+                        </button>  
+                        </span>
                     </div>
                   </div>
                 </div>
@@ -55,6 +74,7 @@ export default function Electrocatagory() {
         </div>
       </div>
     </div>
+    <ToastContainer/>
   </div>
   )
 }

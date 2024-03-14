@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import articlejson from '../articles.json'
 import { Link } from 'react-router-dom';
 import {useDispatch} from 'react-redux';
-import {addItem} from '../slices/CartSlice'
+import {addItem} from '../slices/CartSlice';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Shoes() {
 
@@ -14,6 +16,21 @@ export default function Shoes() {
       const result = articlejson.filter(item => item.category === 'shoes');
       setData(result);
     }, []);
+
+    const notify=()=>
+  {
+    toast.success('Item added successfully', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
+
   return (
     <div>
       <div className='container display'>
@@ -38,9 +55,12 @@ export default function Shoes() {
                         <small className="text-body-secondary"><b>Rating: {values.rating.rate}</b></small>
                         <small style={{float:'right'}}><b>{" Rupees ₹ "}{values.price}</b></small>
                       </div>
-                      <button className="card-footer container btn" onClick={e=>dispatch(addItem({name:values.title, price:values.price}))}>
-                        <b>Add to cart</b>
-                      </button>      
+                      <span onClick={notify}>
+                        <button className="card-footer container btn" onClick={e=>dispatch(addItem({name:values.title, price:values.price}))}>
+
+                            <b>Add to cart</b>
+                        </button>  
+                      </span>      
                   </div>
                 </div>
               </div>
@@ -50,6 +70,7 @@ export default function Shoes() {
         </div>
       </div>
     </div>
+    <ToastContainer/>
     </div>
   )
 }

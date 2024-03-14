@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import {useDispatch} from 'react-redux';
-import {addItem} from '../slices/CartSlice'
+import {addItem} from '../slices/CartSlice';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Viewcards(props) {
@@ -12,6 +14,20 @@ function Viewcards(props) {
     {
         console.log(props.id)
     }
+
+    const notify=()=>
+  {
+    toast.success('Item added successfully', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
 
     
 
@@ -34,13 +50,16 @@ function Viewcards(props) {
                             <small className="text-body-secondary"><b>Rating: {props.rating}</b></small>
                             <small style={{float:'right'}}><b>{" Rupees ₹ "}{props.price}</b></small>
                             </div>
-                            <button className="card-footer container btn" onClick={e=>dispatch(addItem({name:props.title, price:props.price}))}>
-                            <b>Add to cart</b>
-                            </button> 
+                            <span onClick={notify}>
+                                <button className="card-footer container btn" onClick={e=>dispatch(addItem({name:props.title, price:props.price}))}>
+                                    <b>Add to cart</b>
+                                </button>  
+                            </span>
                     </div>
                 </div>
             </div>
         </div>
+        <ToastContainer/>
         </div>
         
     )
