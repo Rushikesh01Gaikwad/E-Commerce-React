@@ -27,7 +27,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-        <Navbar/>
+        <Navbar totalincart={"0"}/>
         <Header/>
         <Allsidebar/>
         <Allpopup/>

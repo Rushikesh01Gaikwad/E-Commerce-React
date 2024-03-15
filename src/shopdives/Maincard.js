@@ -11,7 +11,7 @@ const Maincard=()=> {
             </div>
           </div>
           <div className="adjustrightcontaintmainimg">
-            <h3></h3>
+            <h3>Your Product</h3>
             <span style={{color:'green'}}>Special offer</span>
             <div style={{display:'flex'}}>
               <h4>description</h4>

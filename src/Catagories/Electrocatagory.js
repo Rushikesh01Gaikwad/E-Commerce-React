@@ -32,6 +32,7 @@ export default function Electrocatagory() {
       });
   }
 
+
   return (
     <div>
       <div className='container display'>
@@ -60,10 +61,9 @@ export default function Electrocatagory() {
                           <small style={{float:'right'}}><b>{" Rupees ₹ "}{values.price}</b></small>
                         </div>
                         <span onClick={notify}>
-                        <button className="card-footer container btn" onClick={e=>dispatch(addItem({name:values.title, price:values.price}))}>
-
-                            <b>Add to cart</b>
-                        </button>  
+                          <button className="card-footer container btn" onClick={e=>dispatch(addItem({name:values.title, price:values.price, image:values.image}))}>
+                              <b>Add to cart</b>
+                          </button>  
                         </span>
                     </div>
                   </div>

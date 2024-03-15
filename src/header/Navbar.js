@@ -2,7 +2,8 @@ import React from "react";
 import logo from "../Images/logo/mitraalogoo.png";
 
 
-export default function Navbar() {
+export default function Navbar(props) {
+
 
   return (
     <div>
@@ -80,13 +81,17 @@ export default function Navbar() {
           </button>
           <button
             type="button"
-            className="btn btn-light mx-2 my-3"
+            className="btn btn-light mx-2 my-3 position-relative"
             data-bs-toggle="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasWithBothOptionscart"
             aria-controls="offcanvasWithBothOptions"
           >
             🛒Cart
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {props.totalincart}
+              <span class="visually-hidden">unread messages</span>
+            </span>
           </button>
         </div>
       </nav>
