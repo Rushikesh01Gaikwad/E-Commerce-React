@@ -5,7 +5,8 @@ import {useDispatch} from 'react-redux';
 import {addItem} from '../slices/CartSlice'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import {mainCard} from '../slices/Maincardslice';
+ 
 export default function Electrocatagory() {
 
   const dispatch = useDispatch();
@@ -48,7 +49,7 @@ export default function Electrocatagory() {
 
                     <div className="card" style={{width:"18rem"}}>
                     <img src={values.image} className="card-img-top sizeimagecard" alt="..."/>
-                    <Link type="button" className="btn" style={{backgroundColor:"#009698",borderRadius:'0px'}} to='/Mainproduct'>
+                    <Link type="button" className="btn" style={{backgroundColor:"#009698",borderRadius:'0px'}} to='/Mainproduct' onClick={e=>dispatch(mainCard({name:values.title, price:values.price, image:values.image, description: values.description, rate: values.rating.rate}))}>
                         <div className="card-body" style={{backgroundColor:"#009698", color:"white"}}>
                           <span className="card-title"><h5>{values.title.slice(0,40)}...</h5></span>
                         </div></Link>
