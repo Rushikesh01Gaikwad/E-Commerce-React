@@ -35,7 +35,7 @@ function App() {
           <Route path='/' element={<Alldives/>}></Route>
           <Route path='/mens' element={<Menscatagory/>}></Route>
           <Route path='/women' element={<Womenscatagory/>}></Route>
-          <Route path='/elctronics' element={<Electronicscat/>}></Route>
+          <Route path='/electronics' element={<Electronicscat/>}></Route>
           <Route path='/jwellery' element={<Jwellerycatagory/>}></Route>
           <Route path='/flipflop' element={<Flipflop/>}></Route>
           <Route path='/hat' element={<Hatcat/>}></Route>

@@ -9,7 +9,7 @@ export default function Navbar(props) {
     <div>
       <nav
         className="navbar navbar-expand-lg"
-        style={{ backgroundColor: "#009698" }}>
+        style={{ backgroundColor: "#0074eb" }}>
         <div className="container-fluid">
           <a className="navbar-brand">
             <img className="complogo my-3" src={logo} alt=""></img>
@@ -42,20 +42,9 @@ export default function Navbar(props) {
               </ul>
             </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <button
-                type="button"
-                className="btn btn-light font-weight-bold mx-2 my-3"
-                data-bs-toggle="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasWithBothOptionsone"
-                aria-controls="offcanvasWithBothOptions"
-              >
-                Location
-              </button>
-            </ul>
+            
             <textarea
-              className="form-control"
+              className="form-control mx-2"
               id="mybox"
               placeholder="Search here"
               rows="1"

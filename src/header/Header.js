@@ -3,52 +3,51 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <div className="aligndiv" style={{ marginLeft: "10px" }}>
-      <nav className="navbar navbar-expand bg-body-tertiary container-fluid">
-        <label>
-          <h6>All ➡️</h6>
-        </label>
-        <Link
+    <div className="aligndiv">
+      <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary container-fluid">
+        <button
+          className="navbar-toggler"
           type="button"
-          className="btn hover"
-          to='/'
-          
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <h6>Home</h6>
-        </Link>
-        <Link
-          type="button"
-          className="btn hover"
-          to='/elctronics'
-        >
-          <h6>Electronics</h6>
-        </Link>
-        <Link
-          type="button"
-          className="btn hover"
-          to='/mens'
-        >
-          <h6>Men's</h6>
-        </Link>
-        <Link
-          type="button"
-          className="btn hover"
-          to='/women'
-        >
-          <h6>Women's</h6>
-        </Link>
-        <Link
-          type="button"
-          className="btn hover"
-          to='/jwellery'
-        >
-          <h6>Jwellery</h6>
-        </Link> 
-        <p className="ms-auto"></p>
-        <h6>New Launches Mobiles, Electronics {"&"} more |</h6>
-        <button type="button" className="btn hover">
-          <h6>Shop Now</h6>
+          <span className="navbar-toggler-icon"></span>
         </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item hover mx-2">
+              <Link className="nav-link" to="/">
+                <h6>Home</h6>
+              </Link>
+            </li>
+            <li className="nav-item hover mx-2">
+              <Link className="nav-link" to="/electronics">
+                <h6>Electronics</h6>
+              </Link>
+            </li>
+            <li className="nav-item hover mx-2">
+              <Link className="nav-link" to="/mens">
+                <h6>Men's</h6>
+              </Link>
+            </li>
+            <li className="nav-item hover mx-2">
+              <Link className="nav-link" to="/women">
+                <h6>Women's</h6>
+              </Link>
+            </li>
+            <li className="nav-item hover mx-2">
+              <Link className="nav-link" to="/jwellery">
+                <h6>Jewellery</h6>
+              </Link>
+            </li>
+          </ul>
+          <span className="navbar-text">
+            <b>New Launches Mobiles, Electronics & more</b>
+          </span>
+        </div>
       </nav>
     </div>
   );
