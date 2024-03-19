@@ -1,41 +1,43 @@
-import React from 'react'
-import usericon from '../Images/icons/usericon.png'
-
+import React from 'react';
+import usericon from '../Images/icons/usericon.png';
 
 export default function SignInPopup() {
-
   return (
-    <div>
-      <div className="modal fade" id="staticBackdropsignin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div className="modal-dialog">
-            <div className="modal-content">
-            <div className="modal-header" style={{backgroundColor:"whitesmoke"}}>
-                <h1 className="modal-title fs-5" id="staticBackdropLabel"><h4>Sign In</h4></h1>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div className="modal fade" id="staticBackdropsignin" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div className="modal-dialog modal-dialog-centered">
+        <div className="modal-content">
+          <div className="modal-header bg-light">
+            <h5 className="modal-title text-primary">Sign In</h5>
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div className="modal-body">
+            <div className="text-center mb-4">
+              <img src={usericon} className="usericonlogo" alt="Login user" />
             </div>
-            <div className="text-center">
-              <img src={usericon} className="usericonlogo" alt="login user"/>
-            </div>
-            <div className="modal-body">
             <form>
               <div className="mb-3">
-                <label for="exampleInputEmail1" className="form-label"><h5>Email address</h5></label>
-                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address"/>
+                <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address" />
               </div>
               <div className="mb-3">
-                <label for="exampleInputPassword1" className="form-label"><h5>Password</h5></label>
-                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Enter your password"/>
+                <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Enter your password" />
+              </div>
+              <div className="mb-3 form-check">
+                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
+              </div>
+              <div className="d-grid gap-2">
+                <button type="button" className="btn btn-primary btn-lg">Sign In</button>
               </div>
             </form>
-            </div>
-            <div className="modal-footer justify-content-around" style={{backgroundColor:"whitesmoke"}}>
-                <button type="button" className="btn hover" data-bs-toggle="button" data-bs-toggle="modal" data-bs-target="#staticBackdropsignup"><h6>Sign Up</h6></button>
-                <button type="button" className="btn hover"><h6>Log In</h6></button>
-                <button type="button" className="btn hover" data-bs-dismiss="modal"><h6>Close</h6></button>
-            </div>
-            </div>
+          </div>
+          <div className="modal-footer justify-content-between bg-light">
+            <button type="button" className="btn btn-link text-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropsignup">Sign Up</button>
+            <button type="button" className="btn btn-link text-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-  )
+  );
 }

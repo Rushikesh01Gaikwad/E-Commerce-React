@@ -13,8 +13,8 @@ function Apidata() {
               return (
                 <div className="col md-4" key={element.id}>
                   <Viewcards
-                    title={element.title.slice(0,40)}
-                    description={element.description.slice(0, 40)}
+                    title={element.title}
+                    description={element.description}
                     image={element.image}
                     rating={element.rating.rate}
                     price={element.price}

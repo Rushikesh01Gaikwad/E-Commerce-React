@@ -18,7 +18,7 @@ export default function CatagoryListDiv() {
                 </div>
                 <div className="card-footer">
                   <small className="text-muted"><b>Rating: 3.9</b></small>
-                  <span className="float-end"><b>₹ 399</b></span>
+                  <span className="float-end"><b>from ₹ 399</b></span>
                 </div>
               </div>
             </div>
@@ -30,7 +30,7 @@ export default function CatagoryListDiv() {
                 </div>
                 <div className="card-footer">
                   <small className="text-muted"><b>Rating: 4.1</b></small>
-                  <span className="float-end"><b>₹ 299</b></span>
+                  <span className="float-end"><b>from ₹ 299</b></span>
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@ export default function CatagoryListDiv() {
                 </div>
                 <div className="card-footer">
                   <small className="text-muted"><b>Rating: 4.7</b></small>
-                  <span className="float-end"><b>₹ 399</b></span>
+                  <span className="float-end"><b>from ₹ 399</b></span>
                 </div>
               </div>
             </div>
