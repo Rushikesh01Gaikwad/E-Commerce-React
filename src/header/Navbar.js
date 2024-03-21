@@ -1,9 +1,11 @@
 import React from "react";
 import logo from "../Images/logo/mitraalogoo.png";
+import { useSelector } from "react-redux";
 
 
 export default function Navbar(props) {
 
+  const cartItems = useSelector(state => state.cart)
 
   return (
     <div>
@@ -77,9 +79,9 @@ export default function Navbar(props) {
             aria-controls="offcanvasWithBothOptions"
           >
             🛒Cart
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              {props.totalincart}
-              <span class="visually-hidden">unread messages</span>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-warning">
+            {cartItems.length}  
+              <span class="visually-hidden"></span>
             </span>
           </button>
         </div>

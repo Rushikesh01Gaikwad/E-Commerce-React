@@ -17,7 +17,7 @@ export default function Divtechmode() {
               </Link>
               <div className="card-footer d-flex justify-content-between align-items-center">
                 <span className="text-body-secondary"><b>Rating:</b> {item.rating}</span>
-                <span><b>Rupees ₹ {item.price}</b></span>
+                <span><b>From ₹ {item.price}</b></span>
               </div>
             </div>
           </div>

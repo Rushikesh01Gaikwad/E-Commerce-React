@@ -50,7 +50,7 @@ export default function Electrocatagory() {
                   <p className="text-muted"><b>₹ {values.price}</b></p>
                 </div>
                 <div className="container d-grid gap-2">
-                  <button className="btn btn-success" onClick={() => { dispatch(addItem({ name: values.title, price: values.price, image: values.image })); notify(); }}>Add to Cart</button>
+                  <button className="btn btn-success" onClick={() => { dispatch(addItem({ id:values.id, name: values.title, price: values.price, image: values.image })); notify(); }}>Add to Cart</button>
                 </div>
               </div>
             </div>
