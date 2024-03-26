@@ -75,9 +75,10 @@ function Viewcards(props) {
                                         onClick={() => {
                                             dispatch(
                                                 addItem({
-                                                    name: props.title,
-                                                    price: props.price,
-                                                    image: props.image,
+                                                    id: props.id, 
+                                                    name: props.title, 
+                                                    price: props.price, 
+                                                    image: props.image
                                                 })
                                             );
                                             notify();
