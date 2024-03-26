@@ -92,10 +92,12 @@ export default function CartSidebar() {
           </div>
         </div>
         {items.length > 0 && (
-          <div className='offcanvas-footer bg-primary py-2'>
-            <h4 className="text-white">Your total Rs. {total}
-              {/* <button type="button" className="btn btn-warning ms-5"><b>Buy Now</b></button> */}
-            </h4>
+          <div className="offcanvas-footer bg-secondary py-3 px-4">
+            <div className="d-flex justify-content-between align-items-center">
+              <h4 className="text-white mb-0">Your total: Rs. {total}</h4>
+              {/* You can uncomment the button if needed */}
+              {/* <button type="button" className="btn btn-warning"><b>Buy Now</b></button> */}
+            </div>
           </div>
         )}
       </div>

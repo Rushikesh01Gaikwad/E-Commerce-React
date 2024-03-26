@@ -17,6 +17,22 @@ export default function Electrocatagory() {
     setData(result);
   }, []);
 
+  const sortByPrice = (order) => {
+    if (order === 'highToLow') {
+      setData([...data].sort((a, b) => b.price - a.price));
+    } else if (order === 'lowToHigh') {
+      setData([...data].sort((a, b) => a.price - b.price));
+    }
+  };
+
+  const sortAlphabetically = (order) => {
+    if (order === 'aToZ') {
+      setData([...data].sort((a, b) => a.title.localeCompare(b.title)));
+    } else if (order === 'zToA') {
+      setData([...data].sort((a, b) => b.title.localeCompare(a.title)));
+    }
+  };
+
   const notify = () => {
     toast.success('Item added successfully', {
       position: 'bottom-right',
@@ -32,6 +48,64 @@ export default function Electrocatagory() {
 
   return (
     <div className="container mt-4">
+      <button
+        className="btn btn-outline-dark rounded-pill"
+        style={{ float: "right" }}
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"
+      >
+        <span className="me-2"></span> 🔎 <b>Filter</b>
+      </button>
+      <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div className="offcanvas-header bg-primary text-white py-3">
+          <h4 className="offcanvas-title" id="offcanvasRightLabel">Filter Data</h4>
+          <button type="button" className="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div className="offcanvas-body">
+          <div className="mb-3">
+            <button className="btn btn-warning w-100 mb-3" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <b>Select Price</b>
+            </button>
+            <div className="collapse" id="collapseExample1">
+              <div className="card card-body">
+                <div className="form-check">
+                  <input type="radio" className="btn-check" name="options-base" id="option1" autoComplete="off" />
+                  <label className="btn btn-outline-success w-100 mb-2" htmlFor="option1" onClick={() => sortByPrice('highToLow')}>
+                    High to low
+                  </label>
+
+                  <input type="radio" className="btn-check" name="options-base" id="option2" autoComplete="off" />
+                  <label className="btn btn-outline-success w-100" htmlFor="option2" onClick={() => sortByPrice('lowToHigh')}>
+                    Low to high
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button className="btn btn-warning w-100 mb-3" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <b>Sort A to Z | Z to A</b>
+            </button>
+            <div className="collapse" id="collapseExample2">
+              <div className="card card-body">
+                <div className="form-check">
+                  <input type="radio" className="btn-check" name="options-base" id="option3" autoComplete="off" />
+                  <label className="btn btn-outline-success w-100 mb-2" htmlFor="option3" onClick={() => sortAlphabetically('aToZ')}>
+                    A to Z
+                  </label>
+
+                  <input type="radio" className="btn-check" name="options-base" id="option4" autoComplete="off" />
+                  <label className="btn btn-outline-success w-100" htmlFor="option4" onClick={() => sortAlphabetically('zToA')}>
+                    Z to A
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <h4 className="mb-4"><b>Showpieces</b></h4>
       <div className="row">
         {data.map((values) => (
