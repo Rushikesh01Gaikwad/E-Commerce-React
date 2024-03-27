@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "../Images/logo/mitraalogoo.png";
 import { useSelector } from "react-redux";
+import articlejson from '../articles.json'
 
+export default function Navbar() {
 
-export default function Navbar(props) {
+  const [searchTerm, setSerchTerm] = useState("")
 
   const cartItems = useSelector(state => state.cart)
 
@@ -44,14 +46,16 @@ export default function Navbar(props) {
               </ul>
             </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            
-            <textarea
-              className="form-control mx-2"
-              id="mybox"
-              placeholder="Search here"
-              rows="1"
-            ></textarea>
-          </div>
+            <input
+                className="form-control mx-2"
+                id="input"
+                placeholder="Search here"
+                rows="1"
+                onChange={(event)=>{
+                  setSerchTerm(event.target.value);
+                }}
+            />
+              </div>
           <button
             type="button"
             className="btn btn-light mx-2 my-3"
@@ -86,6 +90,26 @@ export default function Navbar(props) {
           </button>
         </div>
       </nav>
+      <div className="template_Container">
+              {
+                articlejson 
+                  .filter((val) => {
+                    if(searchTerm === ""){
+                      return null
+                    }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                      return val;
+                    }
+                  })
+                  .map((val) => {
+                    return(
+                      <div className="template" key={val.id}>
+                          <h3>{val.title}</h3>
+                          <h3>{val.price}</h3>
+                      </div> 
+                    )
+                  })
+              }
+            </div>
     </div>
   );
 }

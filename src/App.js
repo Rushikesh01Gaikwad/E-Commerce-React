@@ -9,7 +9,6 @@ import Aboutus from './footer/Aboutus';
 import Footer from './footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Maincard from './shopdives/Maincard';
-import Apidata from './shopdives/Apidata';
 import Menscatagory from './Catagories/Menscatagory';
 import Womenscatagory from './Catagories/Womenscatagory';
 import Electronicscat from './Catagories/Electrocatagory';
@@ -22,6 +21,7 @@ import Makupkit from './Catagories/Makupkit';
 import Shoes from './Catagories/Shoes';
 import Showpiece from './Catagories/Showpiece';
 import Swetors from './Catagories/Swetors';
+import Viewcards from './shopdives/Viewcards';
 
 function App() {
   return (
@@ -45,7 +45,7 @@ function App() {
           <Route path='/shoes' element={<Shoes/>}></Route>
           <Route path='/showpiece' element={<Showpiece/>}></Route>
           <Route path='/swetors' element={<Swetors/>}></Route>
-          <Route path='/products' element={<Apidata/>}></Route>
+          <Route path='/products' element={<Viewcards/>}></Route>
           <Route path='/Mainproduct' element={<Maincard/>}></Route>
         </Routes>
         <Aboutus/>
