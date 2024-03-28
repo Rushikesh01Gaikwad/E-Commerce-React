@@ -141,6 +141,12 @@
   position: fix;
 }
 
+.searchDiv{
+  position: absolute;
+  z-index: 2000;
+  background-color:whitesmoke;
+}
+
 /*********MediaView***********/
 
 @media screen and (max-width: 1005px){
