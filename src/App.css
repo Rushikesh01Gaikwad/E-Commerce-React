@@ -27,7 +27,7 @@
     linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
   -webkit-background-clip: text,padding-box;
           background-clip: text,padding-box;
-  transition: 0.5s;
+  transition: 0.0s;
 }
 .hover:hover {
   --_p: 100%
@@ -144,7 +144,28 @@
 .searchDiv{
   position: absolute;
   z-index: 2000;
-  background-color:whitesmoke;
+  display: flex;
+  flex-direction: column; /* Display search results vertically */
+  background-color: rgb(255, 255, 255);
+  /* border: 3px solid black;*/
+  border-radius: 15px; ;
+}
+
+.searchResult {
+  display: flex;
+  justify-content: space-between; /* Title on left, price on right */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 15px; /* Add some space between search results */
+  width: 100%
+}
+
+.title {
+  flex: 2; /* Title takes remaining space */
+}
+
+.price {
+  margin-left: 20px; /* Add some space between title and price */
+  /* Add any additional styles as needed */
 }
 
 /*********MediaView***********/

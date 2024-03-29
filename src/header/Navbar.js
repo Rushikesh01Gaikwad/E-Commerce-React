@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../Images/logo/mitraalogoo.png";
 import { useSelector } from "react-redux";
 import articlejson from '../articles.json';
@@ -10,14 +10,23 @@ export default function Navbar() {
 
   const dispatch = useDispatch();
 
-  const [searchTerm, setSearchTerm] = useState("");
   const cartItems = useSelector(state => state.cart);
-  const [searchResultsVisible, setSearchResultsVisible] = useState(true);
 
-  const handleResultClick = () => {
-    setSearchResultsVisible(false); // Close search results when link is clicked
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = (event) => {
+    const term = event.target.value;
+    setSearchTerm(term);
+    if (term.trim() !== '') {
+      const results = articlejson.filter((product) =>
+        product.title.toLowerCase().includes(term.toLowerCase())
+      );
+      setSearchResults(results);
+    } else {
+      setSearchResults([]); // Clear search results if search term is empty
+    }
   };
-
 
   return (
     <div>
@@ -59,9 +68,8 @@ export default function Navbar() {
               id="input"
               placeholder="Search here"
               rows="1"
-              onChange={(event) => {
-                setSearchTerm(event.target.value);
-              }}
+              value={searchTerm}
+              onChange={handleSearch}
             />
           </div>
           <button
@@ -100,8 +108,22 @@ export default function Navbar() {
       </nav>
       <div>
         <div className="container">
-            <div className="container mt-3 searchDiv">
-              <div className="row">
+          <div className="container mt-2 searchDiv" >
+            {searchResults.map((product) => (
+              <div key={product.id} className="searchResult hover">
+                <div className="title"><b>{product.title}</b></div>
+                <div className="price"><b>₹ {product.price}</b></div>
+              </div>
+            ))}
+        </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+{/* <div className="row">
                 {searchResultsVisible && articlejson
                   .filter((val) => {
                     if (searchTerm === "") {
@@ -134,10 +156,4 @@ export default function Navbar() {
                       </div>
                     );
                   })}
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+              </div> */}
