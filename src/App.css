@@ -151,6 +151,7 @@
   border-radius: 15px; ;
 }
 
+
 .searchResult {
   display: flex;
   justify-content: space-between; /* Title on left, price on right */

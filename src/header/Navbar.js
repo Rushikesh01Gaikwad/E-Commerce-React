@@ -28,6 +28,18 @@ export default function Navbar() {
     }
   };
 
+  const handleSearchResultClick = (product) => {
+  dispatch(
+    mainCard({
+      name: product.title,
+      price: product.price,
+      image: product.image,
+      description: product.description,
+      rate: product.rating.rate,
+    })
+  );
+};
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#0074eb" }}>
@@ -107,53 +119,20 @@ export default function Navbar() {
         </div>
       </nav>
       <div>
+      <Link to="/Mainproduct">
         <div className="container">
           <div className="container mt-2 searchDiv" >
             {searchResults.map((product) => (
-              <div key={product.id} className="searchResult hover">
+              
+              <div key={product.id} className="searchResult hover" onClick={() => handleSearchResultClick(product)}>
                 <div className="title"><b>{product.title}</b></div>
                 <div className="price"><b>₹ {product.price}</b></div>
               </div>
             ))}
         </div>
         </div>
+        </Link>
       </div>
     </div>
   );
 }
-
-
-{/* <div className="row">
-                {searchResultsVisible && articlejson
-                  .filter((val) => {
-                    if (searchTerm === "") {
-                      return null;
-                    } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-                      return val;
-                    }
-                  })
-                  .map((val) => {
-                    return (
-                      <div className="col-md-3 mb-3" key={val.id}>
-                         <Link to="/Mainproduct" onClick={handleResultClick}>
-                          <div className="card"  onClick={() =>
-                              dispatch(
-                                mainCard({
-                                  name: val.title,
-                                  price: val.price,
-                                  image: val.image,
-                                  description: val.description,
-                                  rate: val.rating.rate,
-                                })
-                              )
-                            }>
-                            <div className="card-body">
-                              <h5 className="card-title">{val.title}</h5>
-                              <p className="card-text">{val.price}</p>
-                            </div>
-                          </div>
-                        </Link>
-                      </div>
-                    );
-                  })}
-              </div> */}
