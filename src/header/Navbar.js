@@ -14,9 +14,11 @@ export default function Navbar() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [isVisible, setIsVisible] = useState(true);
 
   const handleSearch = (event) => {
     const term = event.target.value;
+    setIsVisible(true)
     setSearchTerm(term);
     if (term.trim() !== '') {
       const results = articlejson.filter((product) =>
@@ -39,6 +41,13 @@ export default function Navbar() {
     })
   );
 };
+
+  const handleEvent = () => {
+
+    setIsVisible(false);
+
+  };
+
 
   return (
     <div>
@@ -121,7 +130,7 @@ export default function Navbar() {
       <div>
       <Link to="/Mainproduct">
         <div className="container">
-          <div className="container mt-2 searchDiv" >
+          {isVisible && <div className="container mt-2 searchDiv" onClick={handleEvent}>
             {searchResults.map((product) => (
               
               <div key={product.id} className="searchResult hover" onClick={() => handleSearchResultClick(product)}>
@@ -129,7 +138,7 @@ export default function Navbar() {
                 <div className="price"><b>₹ {product.price}</b></div>
               </div>
             ))}
-        </div>
+        </div>}
         </div>
         </Link>
       </div>
