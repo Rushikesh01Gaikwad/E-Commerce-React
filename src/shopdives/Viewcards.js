@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import articlejson from "../articles.json";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -8,25 +8,36 @@ import "react-toastify/dist/ReactToastify.css";
 import { mainCard } from "../slices/Maincardslice";
 
 export default function Viewcards() {
-
     const dispatch = useDispatch();
     const [data, setData] = useState(articlejson);
+    const [priceFilter, setPriceFilter] = useState({
+        below500: false,
+        above500: false,
+        showAll: true,
+    });
+    const [sortType, setSortType] = useState(null);
 
-    const sortByPrice = (order) => {
-        if (order === "highToLow") {
-            setData([...data].sort((a, b) => b.price - a.price));
-        } else if (order === "lowToHigh") {
-            setData([...data].sort((a, b) => a.price - b.price));
-        }
+    const handlePriceFilterChange = (filter) => {
+        const updatedFilter = {
+            below500: filter === "below500" ? !priceFilter.below500 : false,
+            above500: filter === "above500" ? !priceFilter.above500 : false,
+            showAll: filter === "showAll" ? !priceFilter.showAll : false,
+        };
+        setPriceFilter(updatedFilter);
     };
 
-    const sortAlphabetically = (order) => {
-        if (order === "aToZ") {
-            setData([...data].sort((a, b) => a.title.localeCompare(b.title)));
-        } else if (order === "zToA") {
-            setData([...data].sort((a, b) => b.title.localeCompare(a.title)));
-        }
-    };
+    let filteredData = data.filter((item) => {
+        if (priceFilter.showAll) return true;
+        if (priceFilter.below500 && item.price <= 500) return true;
+        if (priceFilter.above500 && item.price > 500) return true;
+        return false;
+    });
+
+    if (sortType === "asc") {
+        filteredData = filteredData.sort((a, b) => a.price - b.price);
+    } else if (sortType === "desc") {
+        filteredData = filteredData.sort((a, b) => b.price - a.price);
+    }
 
     const notify = () => {
         toast.success("Item added successfully", {
@@ -43,137 +54,59 @@ export default function Viewcards() {
 
     return (
         <div className="container mt-4">
-            <button
-                className="btn btn-outline-dark rounded-pill"
-                style={{ float: "right" }}
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight"
-            >
-                <span className="me-2"></span> 🔎 <b>Filter</b>
-            </button>
-
-            <div
-                className="offcanvas offcanvas-end"
-                tabIndex="-1"
-                id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel"
-            >
-                <div className="offcanvas-header bg-primary text-white py-3">
-                    <h4 className="offcanvas-title" id="offcanvasRightLabel">
-                        Filter Data
-                    </h4>
-                    <button
-                        type="button"
-                        className="btn-close text-white"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"
-                    ></button>
-                </div>
-                <div className="offcanvas-body">
-                    <div className="mb-3">
-                        <button
-                            className="btn btn-warning w-100 mb-3"
-                            data-bs-toggle="collapse"
-                            href="#collapseExample1"
-                            role="button"
-                            aria-expanded="false"
-                            aria-controls="collapseExample"
-                        >
-                            <b>Select Price</b>
-                        </button>
-                        <div className="collapse" id="collapseExample1">
-                            <div className="card card-body">
-                                <div className="form-check">
-                                    <input
-                                        type="radio"
-                                        className="btn-check"
-                                        name="options-base"
-                                        id="option1"
-                                        autoComplete="off"
-                                    />
-                                    <label
-                                        className="btn btn-outline-success w-100 mb-2"
-                                        htmlFor="option1"
-                                        onClick={() => sortByPrice("highToLow")}
-                                    >
-                                        High to low
-                                    </label>
-
-                                    <input
-                                        type="radio"
-                                        className="btn-check"
-                                        name="options-base"
-                                        id="option2"
-                                        autoComplete="off"
-                                    />
-                                    <label
-                                        className="btn btn-outline-success w-100"
-                                        htmlFor="option2"
-                                        onClick={() => sortByPrice("lowToHigh")}
-                                    >
-                                        Low to high
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+            {/* Filter Section */}
+            <div className="row mb-3">
+                <div className="col">
+                    <div className="form-check form-check-inline">
+                        <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="showAll"
+                            checked={priceFilter.showAll}
+                            onChange={() => handlePriceFilterChange("showAll")}
+                        />
+                        <label className="form-check-label" htmlFor="showAll">
+                            Show All
+                        </label>
                     </div>
-                    <div>
-                        <button
-                            className="btn btn-warning w-100 mb-3"
-                            data-bs-toggle="collapse"
-                            href="#collapseExample2"
-                            role="button"
-                            aria-expanded="false"
-                            aria-controls="collapseExample"
-                        >
-                            <b>Sort A to Z | Z to A</b>
+                    <div className="form-check form-check-inline">
+                        <input
+                            className="form-check-input"
+                            type="radio"
+                            id="below500"
+                            checked={priceFilter.below500}
+                            onChange={() => handlePriceFilterChange("below500")}
+                        />
+                        <label className="form-check-label" htmlFor="below500">
+                            Below ₹500
+                        </label>
+                    </div>
+                    <div className="form-check form-check-inline">
+                        <input
+                            className="form-check-input"
+                            type="radio"
+                            id="above500"
+                            checked={priceFilter.above500}
+                            onChange={() => handlePriceFilterChange("above500")}
+                        />
+                        <label className="form-check-label" htmlFor="above500">
+                            Above ₹500
+                        </label>
+                    </div>
+                    <div className="btn-group ml-3">
+                        <button className="btn btn-primary mx-3" onClick={() => setSortType("asc")}>
+                            Sort Ascending
                         </button>
-                        <div className="collapse" id="collapseExample2">
-                            <div className="card card-body">
-                                <div className="form-check">
-                                    <input
-                                        type="radio"
-                                        className="btn-check"
-                                        name="options-base"
-                                        id="option3"
-                                        autoComplete="off"
-                                    />
-                                    <label
-                                        className="btn btn-outline-success w-100 mb-2"
-                                        htmlFor="option3"
-                                        onClick={() => sortAlphabetically("aToZ")}
-                                    >
-                                        A to Z
-                                    </label>
-
-                                    <input
-                                        type="radio"
-                                        className="btn-check"
-                                        name="options-base"
-                                        id="option4"
-                                        autoComplete="off"
-                                    />
-                                    <label
-                                        className="btn btn-outline-success w-100"
-                                        htmlFor="option4"
-                                        onClick={() => sortAlphabetically("zToA")}
-                                    >
-                                        Z to A
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                        <button className="btn btn-primary" onClick={() => setSortType("desc")}>
+                            Sort Descending
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <h4 className="mb-4">
-                <b>All items</b>
-            </h4>
+            {/* Item Display */}
             <div className="row">
-                {data.map((values) => (
+                {filteredData.map((values) => (
                     <div className="col-md-4 mb-4" key={values.id}>
                         <div className="card">
                             <Link to="/Mainproduct">
@@ -196,9 +129,7 @@ export default function Viewcards() {
                             </Link>
                             <div className="card-body">
                                 <h5 className="card-title">{values.title.slice(0, 40)}...</h5>
-                                <p className="card-text">
-                                    {values.description.slice(0, 40)}...
-                                </p>
+                                <p className="card-text">{values.description.slice(0, 40)}...</p>
                             </div>
                             <div className="card-footer">
                                 <div className="d-flex justify-content-between align-items-center">
@@ -234,5 +165,5 @@ export default function Viewcards() {
             </div>
             <ToastContainer />
         </div>
-    )
+    );
 }
