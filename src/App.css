@@ -35,7 +35,7 @@
 
 .headerdiv
 {
-  margin: 1vw;
+  margin: 0.5vw;
   padding: 0;
   display: flex;
   height: 22vw;
@@ -70,7 +70,7 @@
 
 .divtopmarg
 {
-  margin-top: 3vw;
+  margin-top: 1vw;
 }
 
 .card-rating .fa-star 
@@ -160,6 +160,12 @@
   width: 100%
 }
 
+.all-container{
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+}
+
 .title {
   flex: 2; /* Title takes remaining space */
 }
@@ -167,6 +173,41 @@
 .price {
   margin-left: 20px; /* Add some space between title and price */
   /* Add any additional styles as needed */
+}
+
+.flex {
+  display: flex;
+  margin-top: 1vw;
+  background-color: #ffffff;
+  height: 100%;
+  border-radius: 15px;
+  padding-bottom: 1vw;
+}
+
+.address-body{
+  display: flex;
+}
+
+.containerFirst-address{
+  width: 70%;
+  margin-right: 1vw;
+  margin-top: 1vw;
+}
+
+.containerSecond-address{
+  margin-top: 1vw;
+  margin-left: 1vw;
+  width: 30%;
+}
+
+.btn-proceed{
+  float: right;
+  margin-right: 1vw;
+  margin-top: 1vw;
+}
+
+.card{
+  width:100%
 }
 
 /*********MediaView***********/

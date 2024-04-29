@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import logo from "../Images/logo/mitraalogoo.png";
 import { useSelector } from "react-redux";
 import articlejson from '../articles.json';

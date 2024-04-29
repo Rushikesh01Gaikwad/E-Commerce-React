@@ -4,7 +4,7 @@ import Fashions from './Fashions';
 
 export default function Alldives() {
   return (
-    <div>
+    <div className='all-container'>
         <CatagoryListDiv/>
         <Fashions/>
     </div>

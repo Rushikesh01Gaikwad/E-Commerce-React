@@ -13,125 +13,207 @@ export default function Electrocatagory() {
 
   useEffect(() => {
     // Filter the data by 'electronics' category when component mounts
-    const result = articlejson.filter(item => item.category === "men's clothing");
+    const result = articlejson.filter(
+      (item) => item.category === "men's clothing"
+    );
     setData(result);
+
   }, []);
+  const [priceFilter, setPriceFilter] = useState({
+    below500: false,
+    between500And5000: false,
+    above5000: false,
+    showAll: true,
+  });
+  const [sortType, setSortType] = useState(null);
 
-  const sortByPrice = (order) => {
-    if (order === 'highToLow') {
-      setData([...data].sort((a, b) => b.price - a.price));
-    } else if (order === 'lowToHigh') {
-      setData([...data].sort((a, b) => a.price - b.price));
-    }
+  const handlePriceFilterChange = (filter) => {
+    const updatedFilter = {
+      below500: filter === "below500",
+      between500And5000: filter === "between500And5000",
+      above5000: filter === "above5000",
+      showAll: filter === "showAll",
+    };
+    setPriceFilter(updatedFilter);
   };
 
-  const sortAlphabetically = (order) => {
-    if (order === 'aToZ') {
-      setData([...data].sort((a, b) => a.title.localeCompare(b.title)));
-    } else if (order === 'zToA') {
-      setData([...data].sort((a, b) => b.title.localeCompare(a.title)));
-    }
-  };
+  let filteredData = data.filter((item) => {
+    if (priceFilter.showAll) return true;
+    if (priceFilter.below500 && item.price <= 500) return true;
+    if (priceFilter.between500And5000 && item.price > 500 && item.price <= 5000) return true;
+    if (priceFilter.above5000 && item.price > 5000) return true;
+    return false;
+  });
+
+  if (sortType === "asc") {
+    filteredData = filteredData.sort((a, b) => a.price - b.price);
+  } else if (sortType === "desc") {
+    filteredData = filteredData.sort((a, b) => b.price - a.price);
+  }
 
   const notify = () => {
-    toast.success('Item added successfully', {
-      position: 'bottom-right',
+    toast.success("Item added successfully", {
+      position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: 'light',
+      theme: "light",
     });
   };
 
   return (
-    <div className="container mt-4">
-      <button
-        className="btn btn-outline-dark rounded-pill"
-        style={{ float: "right" }}
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasRight"
-        aria-controls="offcanvasRight"
-      >
-        <span className="me-2"></span> 🔎 <b>Filter</b>
-      </button>
-      <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div className="offcanvas-header bg-primary text-white py-3">
-          <h4 className="offcanvas-title" id="offcanvasRightLabel">Filter Data</h4>
-          <button type="button" className="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div className="offcanvas-body">
-          <div className="mb-3">
-            <button className="btn btn-warning w-100 mb-3" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
-              <b>Select Price</b>
-            </button>
-            <div className="collapse" id="collapseExample1">
-              <div className="card card-body">
-                <div className="form-check">
-                  <input type="radio" className="btn-check" name="options-base" id="option1" autoComplete="off" />
-                  <label className="btn btn-outline-success w-100 mb-2" htmlFor="option1" onClick={() => sortByPrice('highToLow')}>
-                    High to low
-                  </label>
+    <div className='all-container'>
+      <div className="container">
 
-                  <input type="radio" className="btn-check" name="options-base" id="option2" autoComplete="off" />
-                  <label className="btn btn-outline-success w-100" htmlFor="option2" onClick={() => sortByPrice('lowToHigh')}>
-                    Low to high
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <button className="btn btn-warning w-100 mb-3" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
-              <b>Sort A to Z | Z to A</b>
-            </button>
-            <div className="collapse" id="collapseExample2">
-              <div className="card card-body">
-                <div className="form-check">
-                  <input type="radio" className="btn-check" name="options-base" id="option3" autoComplete="off" />
-                  <label className="btn btn-outline-success w-100 mb-2" htmlFor="option3" onClick={() => sortAlphabetically('aToZ')}>
-                    A to Z
-                  </label>
+        <h4 className="">
+          <b></b>
+        </h4>
 
-                  <input type="radio" className="btn-check" name="options-base" id="option4" autoComplete="off" />
-                  <label className="btn btn-outline-success w-100" htmlFor="option4" onClick={() => sortAlphabetically('zToA')}>
-                    Z to A
-                  </label>
-                </div>
-              </div>
+        <div className="row mb-4">
+          <div className="col">
+            <div className="form-check form-check-inline mt-4">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="showAll"
+                checked={priceFilter.showAll}
+                onChange={() => handlePriceFilterChange("showAll")}
+              />
+              <label className="form-check-label" htmlFor="showAll">
+                Show All
+              </label>
             </div>
+            <div className="form-check form-check-inline">
+              <input
+                className="form-check-input"
+                type="radio"
+                id="below500"
+                checked={priceFilter.below500}
+                onChange={() => handlePriceFilterChange("below500")}
+              />
+              <label className="form-check-label" htmlFor="below500">
+                Below ₹500
+              </label>
+            </div>
+            <div className="form-check form-check-inline">
+              <input
+                className="form-check-input"
+                type="radio"
+                id="between500And5000"
+                checked={priceFilter.between500And5000}
+                onChange={() => handlePriceFilterChange("between500And5000")}
+              />
+              <label className="form-check-label" htmlFor="between500And5000">
+                ₹500 - ₹5000
+              </label>
+            </div>
+            <div className="form-check form-check-inline">
+              <input
+                className="form-check-input"
+                type="radio"
+                id="above5000"
+                checked={priceFilter.above5000}
+                onChange={() => handlePriceFilterChange("above5000")}
+              />
+              <label className="form-check-label" htmlFor="above5000">
+                Above ₹5000
+              </label>
+            </div>
+            <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
+              <input
+                type="radio"
+                className="btn-check"
+                name="sortType"
+                id="asc"
+                autoComplete="off"
+                checked={sortType === "asc"} // Check if sortType is "asc"
+                onChange={() => setSortType("asc")} // Set sortType to "asc" on change
+              />
+              <label className="btn btn-outline-primary" htmlFor="asc">
+                Ascending
+              </label>
+
+              <input
+                type="radio"
+                className="btn-check"
+                name="sortType"
+                id="desc"
+                autoComplete="off"
+                checked={sortType === "desc"} // Check if sortType is "desc"
+                onChange={() => setSortType("desc")} // Set sortType to "desc" on change
+              />
+              <label className="btn btn-outline-primary" htmlFor="desc">
+                Descending
+              </label>
+            </div>
+
           </div>
         </div>
-      </div>
-      <h4 className="mb-4"><b>Mens</b></h4>
-      <div className="row">
-        {data.map((values) => (
-          <div className="col-md-4 mb-4" key={values.id}>
-            <div className="card">
-              <Link to="/Mainproduct">
-              <img src={values.image} className="card-img-top sizeimagecard" onClick={() => dispatch(mainCard({ name: values.title, price: values.price, image: values.image, description: values.description, rate: values.rating.rate }))} alt="Product" />
-              </Link>
-              <div className="card-body">
-                <h5 className="card-title">{values.title.slice(0, 40)}...</h5>
-                <p className="card-text">{values.description.slice(0, 40)}...</p>
-              </div>
-              <div className="card-footer">
-                <div className="d-flex justify-content-between align-items-center">
-                  <p className="text-muted"><b>Rating: {values.rating.rate}</b></p>
-                  <p className="text-muted"><b>₹ {values.price}</b></p>
+        <div className="row">
+          {filteredData.map((values) => (
+            <div className="col-md-4 mb-4" key={values.id}>
+              <div className="card">
+                <Link to="/Mainproduct">
+                  <img
+                    src={values.image}
+                    className="card-img-top sizeimagecard"
+                    onClick={() =>
+                      dispatch(
+                        mainCard({
+                          name: values.title,
+                          price: values.price,
+                          image: values.image,
+                          description: values.description,
+                          rate: values.rating.rate,
+                        })
+                      )
+                    }
+                    alt="Product"
+                  />
+                </Link>
+                <div className="card-body">
+                  <h5 className="card-title">{values.title.slice(0, 40)}...</h5>
+                  <p className="card-text">
+                    {values.description.slice(0, 40)}...
+                  </p>
                 </div>
-                <div className="container d-grid gap-2">
-                  <button className="btn btn-success" onClick={() => { dispatch(addItem({ id:values.id, name: values.title, price: values.price, image: values.image })); notify(); }}>Add to Cart</button>
+                <div className="card-footer">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <p className="text-muted">
+                      <b>Rating: {values.rating.rate}</b>
+                    </p>
+                    <p className="text-muted">
+                      <b>₹ {values.price}</b>
+                    </p>
+                  </div>
+                  <div className="container d-grid gap-2">
+                    <button
+                      className="btn btn-success"
+                      onClick={() => {
+                        dispatch(
+                          addItem({
+                            id: values.id,
+                            name: values.title,
+                            price: values.price,
+                            image: values.image,
+                          })
+                        );
+                        notify();
+                      }}
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <ToastContainer />
       </div>
-      <ToastContainer />
     </div>
   );
 }

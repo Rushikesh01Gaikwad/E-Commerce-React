@@ -22,6 +22,7 @@ import Shoes from './Catagories/Shoes';
 import Showpiece from './Catagories/Showpiece';
 import Swetors from './Catagories/Swetors';
 import Viewcards from './shopdives/Viewcards';
+import Address from './shopdives/Address';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path='/swetors' element={<Swetors/>}></Route>
           <Route path='/products' element={<Viewcards/>}></Route>
           <Route path='/Mainproduct' element={<Maincard/>}></Route>
+          <Route path='/address' element={<Address/>}></Route>
         </Routes>
         <Aboutus/>
         <Footer/>

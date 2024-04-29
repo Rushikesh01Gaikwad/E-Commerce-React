@@ -14,9 +14,9 @@ export default function Carosel() {
                 <div className="carousel-item active">
                 <img src="https://www.sliderrevolution.com/wp-content/uploads/2023/06/fashion-shop-header-slider-for-wordpress.gif" className="d-block crouselimgadjust" alt="img1"/>
                 </div>
-                <div className="carousel-item active">
+                {/* <div className="carousel-item active">
                 <img src="https://www.sliderrevolution.com/wp-content/uploads/2023/06/fashion-shop-slider.gif" className="d-block crouselimgadjust" alt="img2"/>
-                </div>
+                </div> */}
                 
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
