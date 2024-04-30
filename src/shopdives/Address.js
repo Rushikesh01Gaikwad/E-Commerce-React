@@ -1,6 +1,27 @@
 import React from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Address() {
+
+    const getjson = () => {
+        axios.get("http://localhost:3000/Data")
+            .then(response => {
+                console.log(response.data)
+            })
+            // .then(response => {
+            //     const data = response.data;
+            //     if (data && data.length > 0) {
+            //       const lastRecord = data[data.length - 1];
+            //       console.log('Last record:', lastRecord);
+            //     } else {
+            //       console.log('No records found.');
+            //     }
+            .catch(error => {
+                console.error('there is problem with axios operation', error);
+            });
+    }
+
     return (
         <div>
             <div className="container flex">
@@ -114,7 +135,25 @@ function Address() {
                         </div>
                     </div>
                     <div className="btn-proceed">
-                        <button type="button" class="btn btn-success"><b>Proceed</b></button>
+                        <button type="button" class="btn btn-success" onClick={getjson} data-bs-toggle="modal" data-bs-target="#exampleModal"><b>Proceed</b></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmation</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes! it's me</button>
+                        </div>
                     </div>
                 </div>
             </div>

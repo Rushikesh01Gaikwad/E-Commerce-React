@@ -22,6 +22,7 @@ import Shoes from './Catagories/Shoes';
 import Showpiece from './Catagories/Showpiece';
 import Swetors from './Catagories/Swetors';
 import Viewcards from './shopdives/Viewcards';
+import LastPage from './shopdives/LastPage';
 import Address from './shopdives/Address';
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
           <Route path='/products' element={<Viewcards/>}></Route>
           <Route path='/Mainproduct' element={<Maincard/>}></Route>
           <Route path='/address' element={<Address/>}></Route>
+          <Route path='/submit' element={<LastPage/>}></Route>
         </Routes>
         <Aboutus/>
         <Footer/>

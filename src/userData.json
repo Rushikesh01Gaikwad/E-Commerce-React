@@ -1,0 +1,24 @@
+{
+    "Data": [
+        {
+            "id": 1,
+            "name":"Rushikesh Gaikwad",
+            "pin": "416417",
+            "address": "Sangli, Maharashtra, India",
+            "city": "Sangli",
+            "state": "Maharashtra",
+            "mobile": "9421222308",
+            "payment": "Cash On Delivery"
+        },
+        {
+            "id": 2,
+            "name":"Prathamesh Gaikwad",
+            "pin": "416417",
+            "address": "Sangli, Maharashtra, India",
+            "city": "Sangli",
+            "state": "Maharashtra",
+            "mobile": "7057342121",
+            "payment": "Cash On Delivery"
+        }
+    ]
+}
