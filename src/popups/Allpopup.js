@@ -7,7 +7,6 @@ export default function Allpopup() {
   return (
     <div>
       <SignInPopup/>
-      <SignupPopup/>
       <LangPopup/>
     </div>
   )

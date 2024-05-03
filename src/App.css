@@ -210,6 +210,15 @@
   width:100%
 }
 
+.signupcontainer{
+  justify-content: space-between;
+  background-color: white;
+  margin-top: 1vw;
+  padding-bottom: 1vw;
+  border-radius: 15px;
+  
+}
+
 /*********MediaView***********/
 
 @media screen and (max-width: 1005px){
@@ -296,6 +305,27 @@
    display: flex;
    flex-direction: column;
    height: 100vw;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vw;
+    background-color: #ffffff;
+    height: 100%;
+    border-radius: 15px;
+    padding-bottom: 1vw;
+  }
+
+  .containerFirst-address{
+    width: 100%;
+    margin-right: 1vw;
+    margin-top: 1vw;
+  }
+
+  .containerSecond-address{
+    margin-top: 1vw;
+    margin-left: 1vw;
+    width: 100%;
   }
 
 }

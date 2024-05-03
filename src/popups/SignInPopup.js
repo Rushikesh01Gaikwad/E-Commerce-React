@@ -1,5 +1,6 @@
 import React from 'react';
 import usericon from '../Images/icons/usericon.png';
+import { Link } from 'react-router-dom';
 
 export default function SignInPopup() {
   return (
@@ -33,7 +34,9 @@ export default function SignInPopup() {
             </form>
           </div>
           <div className="modal-footer justify-content-between bg-light">
-            <button type="button" className="btn btn-link text-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropsignup">Sign Up</button>
+            <Link to="/signup">
+              <button type="button" className="btn btn-link text-primary" data-bs-dismiss="modal">Sign Up</button>
+            </Link>
             <button type="button" className="btn btn-link text-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>

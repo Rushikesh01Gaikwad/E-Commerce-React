@@ -24,6 +24,7 @@ import Swetors from './Catagories/Swetors';
 import Viewcards from './shopdives/Viewcards';
 import LastPage from './shopdives/LastPage';
 import Address from './shopdives/Address';
+import SignupPopup from './popups/SignupPopup';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path='/Mainproduct' element={<Maincard/>}></Route>
           <Route path='/address' element={<Address/>}></Route>
           <Route path='/submit' element={<LastPage/>}></Route>
+          <Route path='/signup' element={<SignupPopup/>}></Route>
         </Routes>
         <Aboutus/>
         <Footer/>
