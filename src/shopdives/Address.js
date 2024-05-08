@@ -1,26 +1,6 @@
 import React from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
 
 function Address() {
-
-    const getjson = () => {
-        axios.get("http://localhost:3000/Data")
-            .then(response => {
-                console.log(response.data)
-            })
-            // .then(response => {
-            //     const data = response.data;
-            //     if (data && data.length > 0) {
-            //       const lastRecord = data[data.length - 1];
-            //       console.log('Last record:', lastRecord);
-            //     } else {
-            //       console.log('No records found.');
-            //     }
-            .catch(error => {
-                console.error('there is problem with axios operation', error);
-            });
-    }
 
     return (
         <div>
@@ -135,7 +115,7 @@ function Address() {
                         </div>
                     </div>
                     <div className="btn-proceed">
-                        <button type="button" class="btn btn-success" onClick={getjson} data-bs-toggle="modal" data-bs-target="#exampleModal"><b>Proceed</b></button>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><b>Proceed</b></button>
                     </div>
                 </div>
             </div>
