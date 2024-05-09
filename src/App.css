@@ -211,12 +211,15 @@
 }
 
 .signupcontainer{
-  justify-content: space-between;
   background-color: white;
   margin-top: 1vw;
   padding-bottom: 1vw;
   border-radius: 15px;
   
+}
+.signupInput{
+  display: flex;
+  width: 100%;
 }
 
 /*********MediaView***********/
