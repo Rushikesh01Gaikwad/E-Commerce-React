@@ -120,31 +120,34 @@ export default function SignInPopup() {
     //     </div>
     //   </div>
     // </div>
-    <div class="login-container">
-      <div class="container1">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-          <input class="form-control" id="exampleFormControlTextarea1" rows="3"/>
-        </div>
-        <div class="d-grid gap-2">
-          <Button type="submit" class="btn btn-primary">
-            <b>Sign In</b>
-          </Button>
-        </div>
-        <div class="d-flex justify-content-between bg-light p-3 rounded">
-          <Link to="/signup">
-            <Button type="button" variant="contained">
-              Sign Up
+    <div>
+      <div className="container mt-3">
+      <form onSubmit={proceedLogin}>
+        <div className="dataContainerLoginPage">
+          <div class="mb-3">
+            <div className="text-center mb-4">
+              <img src={usericon} className="usericonlogo" alt="Login user" />
+            </div>
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="text" class="form-control" value={eml} onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+            <input class="form-control" value={pass} onChange={(e) => setPass(e.target.value)}></input>
+          </div>
+          <div className="modal-footer justify-content-evenly mt-4">
+            <Link to="/signup">
+              <Button type="button" variant="contained">
+                Sign Up
+              </Button>
+            </Link>
+            <Button type="submit" variant="contained">
+              Sign In
             </Button>
-          </Link>
-          <Button type="button" class="btn btn-secondary">Close</Button>
+          </div>
         </div>
+        </form>
       </div>
     </div>
-
   );
 }

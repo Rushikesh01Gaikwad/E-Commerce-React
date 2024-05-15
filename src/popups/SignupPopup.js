@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from 'react-router-dom';
 
 export default function MultilineTextFields() {
 
@@ -14,6 +15,7 @@ export default function MultilineTextFields() {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [pin, setPin] = useState('');
+  const [pass, setPass] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,12 +27,13 @@ export default function MultilineTextFields() {
         address,
         city,
         state,
-        pin
+        pin,
+        pass
       });
 
       console.log('Post added:', response.data);
       notify(); // Notify success
-      resetForm(); // Reset form fields
+      formreset();
 
     } catch (error) {
       console.error('Error adding post:', error);
@@ -38,15 +41,16 @@ export default function MultilineTextFields() {
     }
   };
 
-  const resetForm = () => {
-    setName('');
-    setEmail('');
-    setMobile('');
-    setAddress('');
-    setCity('');
-    setState('');
-    setPin('');
-  };
+  const formreset=()=>{
+    setName('')
+    setAddress('')
+    setCity('')
+    setEmail('')
+    setMobile('')
+    setState('')
+    setPin('')
+    setPass('')
+  }
 
   const notify = () => {
     toast.success("User added successfully", {
@@ -100,9 +104,17 @@ export default function MultilineTextFields() {
               <input type="text" class="form-control" id="pin" value={pin} onChange={(e) => setPin(e.target.value)} />
             </div>
           </div>
-          <Button variant="contained" size="large" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdropsignin">
-            <b>Submit</b>
-          </Button>
+          <div className='signupInput'>
+            <div class="mb-3 sizeadjustdivmaincard">
+              <label for="pin" class="form-label"> Set Password</label>
+              <input type="text" class="form-control" id="pin" value={pass} onChange={(e) => setPass(e.target.value)} />
+            </div>
+            <div class="mt-4 sizeadjustdivmaincard" style={{ marginLeft: "1vw" }}>
+              <Button variant="contained" size="large" type="submit">
+                <b>Submit</b>
+              </Button>
+            </div>
+          </div>
         </form>
       </div>
       <ToastContainer />

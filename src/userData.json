@@ -1,64 +1,15 @@
 {
   "Data": [
     {
-      "id": "900c",
-      "name": "Rushikesh",
+      "id": "d750",
+      "name": "Rushikesh Gaikwad",
       "email": "rushikeshhtc@gmail.com",
       "mobile": "9421222308",
       "address": "Kavathepiran village",
       "city": "Sangli",
       "state": "Maharashtra",
-      "pin": "416417"
-    },
-    {
-      "id": "2288",
-      "name": "ajay singh",
-      "email": "ajaysingh@gmail.com",
-      "mobile": "854563254",
-      "address": "vidyanagar",
-      "city": "kolkatta",
-      "state": "west bengal",
-      "pin": "845632"
-    },
-    {
-      "id": "7f92",
-      "name": "Omkar Shinde",
-      "email": "omkaarS@gmail.com",
-      "mobile": "5784123698",
-      "address": "Wakad Flyover lane 32",
-      "city": "Pune",
-      "state": "Maharashtra",
-      "pin": "415152"
-    },
-    {
-      "id": "3771",
-      "name": "Sarvesh Joshi",
-      "email": "sarveshJoshi@gmail.com",
-      "mobile": "6854712385",
-      "address": "near trikoni garden sanli",
-      "city": "sangli",
-      "state": "Maharashtra",
-      "pin": "416416"
-    },
-    {
-      "id": "5c0d",
-      "name": "Prajesh Gore",
-      "email": "prajeshGore@gmail.com",
-      "mobile": "3256417890",
-      "address": "Dhaiyari village house no 2 pune",
-      "city": "Pune",
-      "state": "maharashtra",
-      "pin": "411052"
-    },
-    {
-      "id": "7d6a",
-      "name": "jesseya",
-      "email": "jesseya@gmail.com",
-      "mobile": "5214639872",
-      "address": "punjab amritsar",
-      "city": "amritsar",
-      "state": "Punjab",
-      "pin": "985452"
+      "pin": "416417",
+      "pass": "Rushi@123"
     }
   ]
 }
