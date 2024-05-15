@@ -12,28 +12,35 @@ export default function SignInPopup() {
   const proceedLogin = (e) => {
     e.preventDefault();
     if (validate()) {
-      console.log("proceed")
-      fetch('http://localhost:3000/Data?' + eml).then((res) => {
-        return res.json();
-      }).then((resp) => {
-        console.log(resp)
-        if (Object.keys(resp).length === 0) {
-          console.log("Enter valid email")
-        }
-        else {
-          if (resp.mobile === pass) {
-            console.log("login successfully")
-            //usenavigate('/')
+      fetch(`http://localhost:3000/Data?email=${encodeURIComponent(eml)}&password=${encodeURIComponent(pass)}`)
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Network response was not ok');
           }
-          else {
-            console.log("Enter valid credential")
+          return res.json();
+        })
+        .then((resp) => {
+          console.log('Response from server:', resp);
+          if (Object.keys(resp).length === 0) {
+            console.log('Invalid email or password');
+          } else {
+            console.log('User found. Checking password...');
+            if (resp.email === eml && resp.pass === pass) {
+              console.log('Login successful');
+              // Redirect user to homepage or perform other actions
+            } else {
+              console.log('Invalid email or password');
+            }
           }
-        }
-      }).catch((err) => {
-        console.log("login failed due to " + err.message);
-      })
+        })
+        .catch((err) => {
+          console.error('Error during login:', err);
+          console.log('Login failed. Please try again later.');
+        });
     }
   };
+  
+  
   const validate = () => {
     let result = true;
     if (eml === "" || eml === null) {
@@ -48,78 +55,6 @@ export default function SignInPopup() {
   };
 
   return (
-    // <div
-    //   className="modal fade"
-    //   id="staticBackdropsignin"
-    //   data-bs-backdrop="static"
-    //   data-bs-keyboard="false"
-    //   tabIndex="-1"
-    //   aria-labelledby="staticBackdropLabel"
-    //   aria-hidden="true"
-    // >
-    //   <div className="modal-dialog modal-dialog-centered">
-    //     <div className="modal-content">
-    //       <div className="modal-header bg-light">
-    //         <h5 className="modal-title text-primary">Sign In</h5>
-    //         <button
-    //           type="button"
-    //           className="btn-close"
-    //           data-bs-dismiss="modal"
-    //           aria-label="Close"
-    //         ></button>
-    //       </div>
-    //       <div className="modal-body">
-    //         <div className="text-center mb-4">
-    //           <img src={usericon} className="usericonlogo" alt="Login user" />
-    //         </div>
-    //         <form onSubmit={proceedLogin}>
-    //           <div className="mb-3">
-    //             <label htmlFor="exampleInputEmail1" className="form-label">
-    //               Email address
-    //             </label>
-    //             <input
-    //               type="text"
-    //               className="form-control"
-    //               id="exampleInputEmail1"
-    //               aria-describedby="emailHelp"
-    //               placeholder="Enter your email address"
-    //               value={eml}
-    //               onChange={(e) => setEmail(e.target.value)}
-    //             />
-    //           </div>
-    //           <div className="mb-3">
-    //             <label htmlFor="exampleInputPassword1" className="form-label">
-    //               Mobile{" "}
-    //             </label>
-    //             <input
-    //               type="password"
-    //               className="form-control"
-    //               id="exampleInputPassword1"
-    //               placeholder="Enter your Mobile Number"
-    //               value={pass}
-    //               onChange={(e) => setPass(e.target.value)}
-    //             />
-    //           </div>
-    //           <div className="d-grid gap-2">
-    //             <Button type="submit" variant="contained">
-    //               <b>Sign In</b>
-    //             </Button>
-    //           </div>
-    //         </form>
-    //       </div>
-    //       <div className="modal-footer justify-content-between bg-light">
-    //         <Link to="/signup">
-    //           <Button type="button" variant="contained" data-bs-dismiss="modal">
-    //             Sign Up
-    //           </Button>
-    //         </Link>
-    //         <Button type="button" variant="contained" data-bs-dismiss="modal">
-    //           Close
-    //         </Button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <div>
       <div className="container mt-3">
       <form onSubmit={proceedLogin}>

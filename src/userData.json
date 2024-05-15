@@ -10,6 +10,17 @@
       "state": "Maharashtra",
       "pin": "416417",
       "pass": "Rushi@123"
+    },
+    {
+      "id": "bb90",
+      "name": "Prajesh Gore",
+      "email": "prajya@gmail.com",
+      "mobile": "4563217890",
+      "address": "sangli gokul nagar",
+      "city": "Sangli",
+      "state": "Maharashtra",
+      "pin": "416416",
+      "pass": "Pajya@123"
     }
   ]
 }
