@@ -102,15 +102,18 @@ export default function Navbar() {
           >
             🔤Language
           </button>
+          <Link to='/login'>
           <button
             type="button"
             className="btn btn-light mx-2 my-3"
-            data-bs-toggle="button"
-            data-bs-toggle="modal"
-            data-bs-target="#staticBackdropsignin"
+            //data-bs-toggle="button"
+            //data-bs-toggle="modal"
+            //data-bs-target="#staticBackdropsignin"
           >
             👤Sign in
+            
           </button>
+          </Link>
           <button
             type="button"
             className="btn btn-light mx-2 my-3 position-relative"

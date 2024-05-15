@@ -25,6 +25,7 @@ import Viewcards from './shopdives/Viewcards';
 import LastPage from './shopdives/LastPage';
 import Address from './shopdives/Address';
 import SignupPopup from './popups/SignupPopup';
+import SignInPopup from './popups/SignInPopup';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Allpopup/>
         <Routes>
           <Route path='/' element={<Alldives/>}></Route>
+          <Route path='/login' element={<SignInPopup/>}></Route>
           <Route path='/mens' element={<Menscatagory/>}></Route>
           <Route path='/women' element={<Womenscatagory/>}></Route>
           <Route path='/electronics' element={<Electronicscat/>}></Route>

@@ -6,7 +6,6 @@ import LangPopup from './LangPopup';
 export default function Allpopup() {
   return (
     <div>
-      <SignInPopup/>
       <LangPopup/>
     </div>
   )
