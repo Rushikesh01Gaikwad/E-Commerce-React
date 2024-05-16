@@ -21,6 +21,39 @@
       "state": "Maharashtra",
       "pin": "416416",
       "pass": "Pajya@123"
+    },
+    {
+      "id": "2069",
+      "name": "Sarvesh Joshi",
+      "email": "sarveshJ@gmil.com",
+      "mobile": "5412369871",
+      "address": "Dharavi lane 32",
+      "city": "Mumbai",
+      "state": "Maharshtra",
+      "pin": "412563",
+      "pass": "saru@123"
+    },
+    {
+      "id": "46d0",
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "pin": "",
+      "pass": ""
+    },
+    {
+      "id": "693f",
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "pin": "",
+      "pass": ""
     }
   ]
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../Images/logo/mitraalogoo.png";
 import { useSelector } from "react-redux";
 import articlejson from '../articles.json';
@@ -9,6 +9,21 @@ import { mainCard } from "../slices/Maincardslice";
 export default function Navbar() {
 
   const dispatch = useDispatch();
+
+  const [btn, setBtn] = useState()
+
+  useEffect(() => {
+    let data = sessionStorage.getItem('name');
+    console.log(data)
+    if (data) {
+      setBtn(true)
+    }
+  })
+
+  const changeState=()=>{
+    setBtn(false)
+    sessionStorage.clear();
+  }
 
   const cartItems = useSelector(state => state.cart);
 
@@ -31,16 +46,16 @@ export default function Navbar() {
   };
 
   const handleSearchResultClick = (product) => {
-  dispatch(
-    mainCard({
-      name: product.title,
-      price: product.price,
-      image: product.image,
-      description: product.description,
-      rate: product.rating.rate,
-    })
-  );
-};
+    dispatch(
+      mainCard({
+        name: product.title,
+        price: product.price,
+        image: product.image,
+        description: product.description,
+        rate: product.rating.rate,
+      })
+    );
+  };
 
   const handleEvent = () => {
 
@@ -102,18 +117,6 @@ export default function Navbar() {
           >
             🔤Language
           </button>
-          <Link to='/login'>
-          <button
-            type="button"
-            className="btn btn-light mx-2 my-3"
-            //data-bs-toggle="button"
-            //data-bs-toggle="modal"
-            //data-bs-target="#staticBackdropsignin"
-          >
-            👤Sign in
-            
-          </button>
-          </Link>
           <button
             type="button"
             className="btn btn-light mx-2 my-3 position-relative"
@@ -128,21 +131,42 @@ export default function Navbar() {
               <span className="visually-hidden"></span>
             </span>
           </button>
+          {
+            btn ? (
+                <button
+                  type="button"
+                  className="btn btn-light mx-2 my-3"
+                  onClick={()=>changeState()}>
+                  ↪️Logout
+                </button>
+            ) : (
+
+              <Link to='/login'>
+                <button
+                  type="button"
+                  className="btn btn-light mx-2 my-3"
+                >
+                  👤Sign in
+
+                </button>
+              </Link>
+            )
+          }
         </div>
       </nav>
       <div>
-      <Link to="/Mainproduct">
-        <div className="container">
-          {isVisible && <div className="container mt-2 searchDiv" onClick={handleEvent}>
-            {searchResults.map((product) => (
-              
-              <div key={product.id} className="searchResult hover" onClick={() => handleSearchResultClick(product)}>
-                <div className="title"><b>{product.title}</b></div>
-                <div className="price"><b>₹ {product.price}</b></div>
-              </div>
-            ))}
-        </div>}
-        </div>
+        <Link to="/Mainproduct">
+          <div className="container">
+            {isVisible && <div className="container mt-2 searchDiv" onClick={handleEvent}>
+              {searchResults.map((product) => (
+
+                <div key={product.id} className="searchResult hover" onClick={() => handleSearchResultClick(product)}>
+                  <div className="title"><b>{product.title}</b></div>
+                  <div className="price"><b>₹ {product.price}</b></div>
+                </div>
+              ))}
+            </div>}
+          </div>
         </Link>
       </div>
     </div>
