@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div className="aligndiv">
-      <nav className="navbar navbar-expand-lg navbar-light bg-white container-fluid">
+      <nav className="navbar navbar-expand-lg text-white container-fluid mt-2" style={{ backgroundColor: "#c1caf7" }}>
         <button
           className="navbar-toggler"
           type="button"

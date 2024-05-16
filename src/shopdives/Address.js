@@ -2,6 +2,14 @@ import React from "react";
 
 function Address() {
 
+    let name = sessionStorage.getItem('name');
+    let email = sessionStorage.getItem('email')
+    let mobile = sessionStorage.getItem('mobile')
+    let address = sessionStorage.getItem('address')
+    let city = sessionStorage.getItem('city')
+    let state = sessionStorage.getItem('state')
+    let pincode = sessionStorage.getItem('pin')
+
     return (
         <div>
             <div className="container flex">
@@ -17,25 +25,25 @@ function Address() {
                                 <div class="accordion-body">
                                     <div className="address-body" >
                                         <div class="form-floating" style={{ width: "50%" }}>
-                                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                                            <input type="email" class="form-control" id="floatingInput" value={name} placeholder="name@example.com" />
                                             <label for="floatingInput">Name</label>
                                         </div>
                                         <div class="form-floating mx-3" style={{ width: "50%" }}>
-                                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+                                            <input type="text" class="form-control" id="floatingPassword" value={pincode} />
                                             <label for="floatingPassword">Pin Code</label>
                                         </div>
                                     </div>
                                     <div class="form-floating mt-3">
-                                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style={{ height: "100px", width: "98%" }}></textarea>
+                                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" value={address} style={{ height: "100px", width: "98%" }}></textarea>
                                         <label for="floatingTextarea2">Address</label>
                                     </div>
                                     <div className="address-body mt-3" >
                                         <div class="form-floating" style={{ width: "50%" }}>
-                                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                                            <input type="email" class="form-control" id="floatingInput" value={city} placeholder="name@example.com" />
                                             <label for="floatingInput">City/District/Town</label>
                                         </div>
                                         <div class="form-floating mx-3" style={{ width: "50%" }}>
-                                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+                                            <input type="text" class="form-control" id="floatingPassword" value={state} />
                                             <label for="floatingPassword">State</label>
                                         </div>
                                     </div>
@@ -51,7 +59,7 @@ function Address() {
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <div class="form-floating mb-2">
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                                        <input type="email" class="form-control" id="floatingInput" value={mobile} placeholder="name@example.com" />
                                         {/* <label for="floatingInput">Mobile Number</label> */}
                                     </div>
                                 </div>
@@ -65,7 +73,7 @@ function Address() {
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <div class="form-check">
+                                    {/* <div class="form-check">
                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
                                         <label class="form-check-label" for="exampleRadios1">
                                             UPI
@@ -91,10 +99,10 @@ function Address() {
                                         <label class="form-check-label" for="exampleRadios4">
                                             EMI
                                         </label>
-                                    </div> 
-                                    <br />
+                                    </div>
+                                    <br /> */}
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5" />
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5" checked />
                                         <label class="form-check-label" for="exampleRadios5">
                                             Cash On Delivery
                                         </label>
@@ -111,11 +119,10 @@ function Address() {
                             <h6 class="card-subtitle mb-2 text-body-secondary">Delivery Charges <del>₹ 70</del> Free</h6>
                             <br />
                             <p class="card-text"><strong><h5>Total Payable 500</h5></strong></p>
-                            <p className="card-footer">Your Total saving on this order ₹ 199 </p>
+                            <p className="card-footer d-flex flex-row-reverse">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><b>Proceed</b></button>
+                            </p>
                         </div>
-                    </div>
-                    <div className="btn-proceed">
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><b>Proceed</b></button>
                     </div>
                 </div>
             </div>

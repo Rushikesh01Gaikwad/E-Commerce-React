@@ -115,14 +115,14 @@
   display: flex;
 }
 
-.aboutstyle
-{
+.aboutstyle {
   background-color: rgb(191, 201, 202);
   width: 100%;
   margin-top: 5px;
   bottom: 0;
   position: fix;
 }
+
 
 .iconsizes
 {

@@ -66,7 +66,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#0074eb" }}>
+      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#475dd6" }}>
         <div className="container-fluid">
           <a className="navbar-brand">
             <img className="complogo my-3" src={logo} alt=""></img>

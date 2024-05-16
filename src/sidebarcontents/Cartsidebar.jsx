@@ -2,6 +2,7 @@ import React, { useState } from 'react'; // Import useState hook
 import { useSelector, useDispatch } from 'react-redux';
 import { getItemSelector } from '../slices/CartSlice';
 import { removeFromCart } from '../slices/CartSlice';
+import { Link } from 'react-router-dom';
 
 export default function CartSidebar() {
 
@@ -96,7 +97,9 @@ export default function CartSidebar() {
             <div className="d-flex justify-content-between align-items-center">
               <h4 className="text-white mb-0">Your total: Rs. {total}</h4>
               {/* You can uncomment the button if needed */}
-              {/* <button type="button" className="btn btn-warning"><b>Buy Now</b></button> */}
+              <Link to='/address'>
+                <button type="button" className="btn btn-warning" data-bs-dismiss="offcanvas"><b>Buy Now</b></button>
+              </Link>
             </div>
           </div>
         )}

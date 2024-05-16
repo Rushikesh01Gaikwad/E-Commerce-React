@@ -6,7 +6,6 @@ import Allsidebar from './sidebarcontents/Allsidebar';
 import Allpopup from './popups/Allpopup';
 import Alldives from './shopdives/Alldives';
 import Aboutus from './footer/Aboutus';
-import Footer from './footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Maincard from './shopdives/Maincard';
 import Menscatagory from './Catagories/Menscatagory';
@@ -57,7 +56,6 @@ function App() {
           <Route path='/signup' element={<SignupPopup/>}></Route>
         </Routes>
         <Aboutus/>
-        <Footer/>
       </BrowserRouter>
       </>
   );

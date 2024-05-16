@@ -6,74 +6,59 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function SignInPopup() {
-  const [eml, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [notification, setNotification] = useState("");
 
-  const [notifi, setnotify] = useState("");
-
-  useEffect(()=>{
+  useEffect(() => {
     sessionStorage.clear();
-  },[]);
-  
-  const usenavigate = useNavigate();
+  }, []);
 
-  const proceedLogin = (e) => {
+  const navigate = useNavigate();
+
+  const proceedLogin = async (e) => {
     e.preventDefault();
     if (validate()) {
-      fetch(`http://localhost:3000/Data?email=${eml}`)
-        .then((res) => {
-          return res.json();
-        })
-        .then((resp) => {
-          console.log('Response from server:', resp);
-          if (Object.keys(resp).length === 0) {
-            console.log('Enter valid Email');
-            setnotify("Enter Valid Email");
-          } else {
-            console.log('User found. Checking password...');
-            if (resp[0].pass === pass) {
-              console.log('Login successful');
-              sessionStorage.setItem('name', resp[0].name)
-              sessionStorage.setItem('email', resp[0].email)
-              sessionStorage.setItem('mobile', resp[0].mobile)
-              sessionStorage.setItem('address', resp[0].address)
-              sessionStorage.setItem('city', resp[0].city)
-              sessionStorage.setItem('state', resp[0].state)
-              sessionStorage.setItem('pin', resp[0].pin)
-              // Redirect user to homepage or perform other actions
-              usenavigate('/')
-              window.location.reload();
-            } else {
-              console.log('Enter valid Password');
-              setnotify("Enter Valid Password")
-            }
-          }
-        })
-        .catch((err) => {
-          console.error('Error during login:', err);
-          setnotify("Error while Login")
-        });
+      try {
+        const response = await fetch(`http://localhost:3000/Data?email=${email}`);
+        const user = await response.json();
+        if (!user || !user.length) {
+          setNotification("User not found. Enter valid email.");
+        } else if (user[0].pass === password) {
+          sessionStorage.setItem('name', user[0].name);
+          sessionStorage.setItem('email', user[0].email)
+          sessionStorage.setItem('mobile', user[0].mobile)
+          sessionStorage.setItem('address', user[0].address)
+          sessionStorage.setItem('city', user[0].city)
+          sessionStorage.setItem('state', user[0].state)
+          sessionStorage.setItem('pin', user[0].pin)
+          // Other sessionStorage settings...
+          navigate('/');
+          window.location.reload();
+        } else {
+          setNotification("Invalid password. Please try again.");
+        }
+      } catch (error) {
+        console.error('Error during login:', error);
+        setNotification("Error while login. Please try again.");
+      }
     }
   };
-  
-  
+
   const validate = () => {
-    let result = true;
-    if (eml === "" || eml === null) {
-      result = false;
-      console.log("enter the username");
-      setnotify("Enter the Email");
+    if (!email.trim()) {
+      setNotification("Enter the Email.");
+      return false;
     }
-    if (pass === "" || pass === null) {
-      result = false;
-      console.log("enter the password");
-      setnotify("Enter the Password")
+    if (!password.trim()) {
+      setNotification("Enter the Password.");
+      return false;
     }
-    return result
+    return true;
   };
 
   const notify = () => {
-    toast.success(`${notifi}`, {
+    toast.success(notification, {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: true,
@@ -85,35 +70,35 @@ export default function SignInPopup() {
     });
   };
 
+  useEffect(() => {
+    if (notification) {
+      notify();
+    }
+  }, [notification]);
+
   return (
-    <div>
-      <div className="container mt-3">
+    <div className="container mt-3">
       <form onSubmit={proceedLogin}>
         <div className="dataContainerLoginPage">
-          <div class="mb-3">
+          <div className="mb-3">
             <div className="text-center mb-4">
               <img src={usericon} className="usericonlogo" alt="Login user" />
             </div>
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="text" class="form-control" value={eml} onChange={(e) => setEmail(e.target.value)} />
+            <label htmlFor="email" className="form-label">Email address</label>
+            <input type="email" id="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-            <input type="password" class="form-control" value={pass} onChange={(e) => setPass(e.target.value)}></input>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">Password</label>
+            <input type="password" id="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           <div className="modal-footer justify-content-evenly mt-4">
             <Link to="/signup">
-              <Button type="button" variant="contained">
-                Sign Up
-              </Button>
+              <Button type="button" variant="contained">Sign Up</Button>
             </Link>
-            <Button type="submit" variant="contained">
-              Sign In
-            </Button>
+            <Button type="submit" variant="contained">Sign In</Button>
           </div>
         </div>
-        </form>
-      </div>
+      </form>
       <ToastContainer />
     </div>
   );
