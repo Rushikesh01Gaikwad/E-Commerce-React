@@ -27,7 +27,7 @@ export default function MultilineTextFields() {
         city,
         state,
         pin,
-        pass
+        pass,
       });
 
       console.log('Post added:', response.data);

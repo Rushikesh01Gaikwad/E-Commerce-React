@@ -1,4 +1,6 @@
 import React from "react";
+import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Address() {
 
@@ -9,6 +11,11 @@ function Address() {
     let city = sessionStorage.getItem('city')
     let state = sessionStorage.getItem('state')
     let pincode = sessionStorage.getItem('pin')
+
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const total = queryParams.get('total');
+    console.log(total)
 
     return (
         <div>
@@ -116,9 +123,9 @@ function Address() {
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Total Details</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Delivery Charges <del>₹ 70</del> Free</h6>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Delivery Charges <del>₹ 70</del><span style={{color:'green'}}> Free</span></h6>
                             <br />
-                            <p class="card-text"><strong><h5>Total Payable 500</h5></strong></p>
+                            <p class="card-text"><strong><h5>Total Payable {total} </h5></strong></p>
                             <p className="card-footer d-flex flex-row-reverse">
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><b>Proceed</b></button>
                             </p>
@@ -135,11 +142,18 @@ function Address() {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-
+                           <p> {name}</p>
+                           <p>{mobile}</p>
+                            <p>{address}</p>
+                            <p>{city}</p>
+                            <p>{state}</p>
+                            <p>{pincode}</p>
+                            <p>Your Total bill is {total}</p>
+                            
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes! it's me</button>
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal"><b>Confirm</b></button>
                         </div>
                     </div>
                 </div>

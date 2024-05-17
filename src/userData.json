@@ -54,6 +54,19 @@
       "state": "",
       "pin": "",
       "pass": ""
+    },
+    {
+      "id": "d738",
+      "name": "Swapn Pawar",
+      "email": "swapn@gmail.com",
+      "mobile": "4512369780",
+      "address": "near ABP chouwk lane 32",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pin": "416417",
+      "pass": "Swapn@123",
+      "orders": "",
+      "cart": ""
     }
   ]
 }

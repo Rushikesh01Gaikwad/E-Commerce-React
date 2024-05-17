@@ -20,7 +20,7 @@ export default function Navbar() {
     }
   })
 
-  const changeState=()=>{
+  const changeState = () => {
     setBtn(false)
     sessionStorage.clear();
   }
@@ -71,33 +71,15 @@ export default function Navbar() {
           <a className="navbar-brand">
             <img className="complogo my-3" src={logo} alt=""></img>
           </a>
-          <div className="dropdown mx-1">
-            <button
-              className="btn custom-button dropdown-toggle btn-light my-3"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="true"
-            >
-              Select Country
-            </button>
-            <ul className="dropdown-menu">
-              <li>
-                <a className="dropdown-item" href="/">
-                  India
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="/">
-                  USA
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="/">
-                  Canada
-                </a>
-              </li>
-            </ul>
-          </div>
+          <button
+            type="button"
+            className="btn btn-light mx-2 my-3"
+            data-bs-toggle="button"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdroplang"
+          >
+            🔤Language
+          </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <input
               className="form-control mx-2"
@@ -108,15 +90,6 @@ export default function Navbar() {
               onChange={handleSearch}
             />
           </div>
-          <button
-            type="button"
-            className="btn btn-light mx-2 my-3"
-            data-bs-toggle="button"
-            data-bs-toggle="modal"
-            data-bs-target="#staticBackdroplang"
-          >
-            🔤Language
-          </button>
           <button
             type="button"
             className="btn btn-light mx-2 my-3 position-relative"
@@ -133,12 +106,21 @@ export default function Navbar() {
           </button>
           {
             btn ? (
+              <div>
                 <button
                   type="button"
                   className="btn btn-light mx-2 my-3"
-                  onClick={()=>changeState()}>
+                  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  🛍️ My Orders
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-light mx-2 my-3"
+                  onClick={() => changeState()}>
                   ↪️Logout
                 </button>
+              </div>
+
             ) : (
 
               <Link to='/login'>
@@ -168,6 +150,22 @@ export default function Navbar() {
             </div>}
           </div>
         </Link>
+      </div>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Your Orders</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

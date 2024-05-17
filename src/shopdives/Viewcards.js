@@ -59,8 +59,8 @@ export default function Viewcards() {
         <div className="all-container">
             <div className="container">
                 {/* Filter Section */}
-                <div className="row mb-3">
-                    <div className="col">
+                <div className="row mb-3 mt-2">
+                    <div className="col mt-3">
                         <div className="form-check form-check-inline">
                             <input
                                 className="form-check-input"
