@@ -24,6 +24,7 @@ import LastPage from './shopdives/LastPage';
 import Address from './shopdives/Address';
 import SignupPopup from './popups/SignupPopup';
 import SignInPopup from './popups/SignInPopup';
+import MyOrders from './shopdives/MyOrders';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
           <Route path='/address' element={<Address/>}></Route>
           <Route path='/submit' element={<LastPage/>}></Route>
           <Route path='/signup' element={<SignupPopup/>}></Route>
+          <Route path='/orders' element={<MyOrders/>}></Route>
         </Routes>
         <Aboutus/>
       </BrowserRouter>

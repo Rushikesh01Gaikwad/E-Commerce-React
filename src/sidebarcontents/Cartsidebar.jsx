@@ -1,18 +1,20 @@
 import React, { useState } from 'react'; // Import useState hook
+import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { getItemSelector } from '../slices/CartSlice';
 import { removeFromCart } from '../slices/CartSlice';
 import { Link } from 'react-router-dom';
 
+
 export default function CartSidebar() {
 
   const dispatch = useDispatch();
 
-  const cartData = sessionStorage.getItem('cart')
-  console.log(cartData)
-
   const items = useSelector(getItemSelector);
-  
+  console.log(items)
+
+  const user = sessionStorage.getItem('id')
+
   // Initialize quantity state for each item
   const [quantities, setQuantities] = useState({});
 
@@ -99,7 +101,7 @@ export default function CartSidebar() {
           <div className="offcanvas-footer bg-secondary py-3 px-4">
             <div className="d-flex justify-content-between align-items-center">
               <h4 className="text-white mb-0">Your total: Rs. {total}</h4>
-              <Link to={`/address?total=${total}`}> 
+              <Link to={`/address?total=${total}`}>
                 <button type="button" className="btn btn-warning" data-bs-dismiss="offcanvas"><b>Buy Now</b></button>
               </Link>
             </div>

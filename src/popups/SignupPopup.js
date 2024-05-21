@@ -15,6 +15,7 @@ export default function MultilineTextFields() {
   const [state, setState] = useState('');
   const [pin, setPin] = useState('');
   const [pass, setPass] = useState('');
+  const [order, setOrder] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,6 +29,7 @@ export default function MultilineTextFields() {
         state,
         pin,
         pass,
+        order,
       });
 
       console.log('Post added:', response.data);

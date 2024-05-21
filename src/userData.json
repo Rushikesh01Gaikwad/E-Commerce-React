@@ -9,7 +9,23 @@
       "city": "Sangli",
       "state": "Maharashtra",
       "pin": "416417",
-      "pass": "Rushi@123"
+      "pass": "Rushi@123",
+      "order": [
+        {
+          "id": "1",
+          "title": "Laptop",
+          "quantity": 1,
+          "price": 50000,
+          "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+        },
+        {
+          "id": "2",
+          "title": "mobile",
+          "quantity": 1,
+          "price": 50000,
+          "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+        }
+      ]
     },
     {
       "id": "bb90",
@@ -20,7 +36,8 @@
       "city": "Sangli",
       "state": "Maharashtra",
       "pin": "416416",
-      "pass": "Pajya@123"
+      "pass": "Pajya@123",
+      "order": []
     },
     {
       "id": "2069",
@@ -31,7 +48,8 @@
       "city": "Mumbai",
       "state": "Maharshtra",
       "pin": "412563",
-      "pass": "saru@123"
+      "pass": "saru@123",
+      "order": []
     },
     {
       "id": "46d0",
@@ -42,18 +60,8 @@
       "city": "",
       "state": "",
       "pin": "",
-      "pass": ""
-    },
-    {
-      "id": "693f",
-      "name": "",
-      "email": "",
-      "mobile": "",
-      "address": "",
-      "city": "",
-      "state": "",
-      "pin": "",
-      "pass": ""
+      "pass": "",
+      "order": []
     },
     {
       "id": "d738",
@@ -65,8 +73,46 @@
       "state": "Maharashtra",
       "pin": "416417",
       "pass": "Swapn@123",
-      "orders": "",
-      "cart": ""
+      "order": []
+    },
+    {
+      "id": "f598",
+      "name": "Omkar Shinde",
+      "email": "omkar@gmail.com",
+      "mobile": "1234567890",
+      "address": "khardi lane 32",
+      "city": "pune",
+      "state": "Maharashtra",
+      "pin": "542631",
+      "pass": "omkar@123",
+      "order": []
+    },
+    {
+      "id": "89a4",
+      "name": "Harshal Kamble",
+      "email": "harshal@gmail.com",
+      "mobile": "4563217809",
+      "address": "Katraj near gas office lane 2",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pin": "411052",
+      "pass": "harshal@123",
+      "order": [
+        {
+          "id": "1",
+          "title": "Laptop",
+          "quantity": 1,
+          "price": 50000,
+          "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+        },
+        {
+          "id": "2",
+          "title": "mobile",
+          "quantity": 1,
+          "price": 50000,
+          "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+        }
+      ]
     }
   ]
 }
