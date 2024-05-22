@@ -1,19 +1,17 @@
 import React, { useState } from 'react'; // Import useState hook
-import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { getItemSelector } from '../slices/CartSlice';
 import { removeFromCart } from '../slices/CartSlice';
-import { Link } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
+import { myOrder } from '../slices/MyOrder';
 
 export default function CartSidebar() {
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const items = useSelector(getItemSelector);
   console.log(items)
-
-  const user = sessionStorage.getItem('id')
 
   // Initialize quantity state for each item
   const [quantities, setQuantities] = useState({});
@@ -41,6 +39,18 @@ export default function CartSidebar() {
     const quantity = quantities[item.id] || 1; // Default to 1 if quantity is not set
     return acc + (item.price * quantity);
   }, 0).toFixed(2);
+
+  const handleBuyNow = () => {
+    const orderDetails = items.map(item => ({
+      id: item.id,
+      name: item.name,
+      quantity: quantities[item.id] || 1,
+      price: item.price,
+      image: item.image,
+    }));
+    dispatch(myOrder(orderDetails));
+    navigate(`/address?total=${total}`); // Navigate to MyOrders page
+  };
 
   return (
     <div>
@@ -101,9 +111,7 @@ export default function CartSidebar() {
           <div className="offcanvas-footer bg-secondary py-3 px-4">
             <div className="d-flex justify-content-between align-items-center">
               <h4 className="text-white mb-0">Your total: Rs. {total}</h4>
-              <Link to={`/address?total=${total}`}>
-                <button type="button" className="btn btn-warning" data-bs-dismiss="offcanvas"><b>Buy Now</b></button>
-              </Link>
+                <button type="button" className="btn btn-warning" data-bs-dismiss="offcanvas" onClick={handleBuyNow}><b>Buy Now</b></button>
             </div>
           </div>
         )}

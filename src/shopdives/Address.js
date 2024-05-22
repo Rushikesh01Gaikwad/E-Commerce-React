@@ -1,8 +1,14 @@
 import React from "react";
 import { useParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Address() {
+
+    const orderDetails = useSelector(state => state.myOrder);
+    console.log(orderDetails)
+
+
 
     let name = sessionStorage.getItem('name');
     let email = sessionStorage.getItem('email')
@@ -12,10 +18,12 @@ function Address() {
     let state = sessionStorage.getItem('state')
     let pincode = sessionStorage.getItem('pin')
 
-    const location = useLocation();
+    const location = useLocation(); // this is for when you pass variable with value using Link to fetch data.
     const queryParams = new URLSearchParams(location.search);
     const total = queryParams.get('total');
     console.log(total)
+
+    
 
     return (
         <div>
