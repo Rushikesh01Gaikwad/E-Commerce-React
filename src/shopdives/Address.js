@@ -1,16 +1,16 @@
 import React from "react";
-import { useParams } from 'react-router-dom';
+import axios from "axios";
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 function Address() {
 
+    const usenavigate = useNavigate();
+
     const orderDetails = useSelector(state => state.myOrder);
-    console.log(orderDetails)
 
-
-
-    let name = sessionStorage.getItem('name');
+    let name = sessionStorage.getItem('name')
     let email = sessionStorage.getItem('email')
     let mobile = sessionStorage.getItem('mobile')
     let address = sessionStorage.getItem('address')
@@ -18,12 +18,36 @@ function Address() {
     let state = sessionStorage.getItem('state')
     let pincode = sessionStorage.getItem('pin')
 
+
     const location = useLocation(); // this is for when you pass variable with value using Link to fetch data.
     const queryParams = new URLSearchParams(location.search);
     const total = queryParams.get('total');
-    console.log(total)
 
-    
+    const handleSubmit = () => {
+        // Fetch the existing user data from the API
+        axios.get(`http://localhost:3000/Data?email=${email}`)
+            .then(response => {
+                var userData = response.data;
+                console.log(userData, orderDetails, userData[0]["order"], userData[0]["id"])
+
+                // Update the order key with orderDetails
+                userData[0]["order"]?.push(orderDetails[0]);
+
+                // Make a POST request to update the user data on the server
+                axios.put(`http://localhost:3000/Data/${userData[0]["id"]}`, userData[0])
+                    .then(response => {
+                        console.log('Order details added successfully:', response.data);
+                    })
+                    .catch(error => {
+                        console.error('Error adding order details:', error);
+                    });
+            })
+            .catch(error => {
+                console.error('Error fetching user data:', error);
+            });
+
+        usenavigate('/final')
+    }
 
     return (
         <div>
@@ -131,7 +155,7 @@ function Address() {
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Total Details</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Delivery Charges <del>₹ 70</del><span style={{color:'green'}}> Free</span></h6>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Delivery Charges <del>₹ 70</del><span style={{ color: 'green' }}> Free</span></h6>
                             <br />
                             <p class="card-text"><strong><h5>Total Payable {total} </h5></strong></p>
                             <p className="card-footer d-flex flex-row-reverse">
@@ -150,18 +174,18 @@ function Address() {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                           <p> {name}</p>
-                           <p>{mobile}</p>
+                            <p> {name}</p>
+                            <p>{mobile}</p>
                             <p>{address}</p>
                             <p>{city}</p>
                             <p>{state}</p>
                             <p>{pincode}</p>
                             <p>Your Total bill is {total}</p>
-                            
+
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success" data-bs-dismiss="modal"><b>Confirm</b></button>
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal" onClick={handleSubmit}><b>Confirm</b></button>
                         </div>
                     </div>
                 </div>

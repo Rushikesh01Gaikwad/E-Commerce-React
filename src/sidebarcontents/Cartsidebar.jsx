@@ -11,7 +11,6 @@ export default function CartSidebar() {
   const navigate = useNavigate();
 
   const items = useSelector(getItemSelector);
-  console.log(items)
 
   // Initialize quantity state for each item
   const [quantities, setQuantities] = useState({});
@@ -41,12 +40,22 @@ export default function CartSidebar() {
   }, 0).toFixed(2);
 
   const handleBuyNow = () => {
+
+    const formatDate = (date) => {
+      const d = new Date(date);
+      const day = (`0${d.getDate()}`).slice(-2);
+      const month = (`0${d.getMonth() + 1}`).slice(-2);
+      const year = d.getFullYear();
+      return `${day}/${month}/${year}`;
+    };
+
     const orderDetails = items.map(item => ({
       id: item.id,
       name: item.name,
       quantity: quantities[item.id] || 1,
       price: item.price,
       image: item.image,
+      date: formatDate(new Date())
     }));
     dispatch(myOrder(orderDetails));
     navigate(`/address?total=${total}`); // Navigate to MyOrders page
