@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+ # Output
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![home1](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/6894a4f4-9283-4f44-972e-aced392b48ad)
 
-## Available Scripts
+![home3](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/5dc9c124-8677-4b77-a6a4-0a7fc292065c)
 
-In the project directory, you can run:
+![home2](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/e8afd3b8-eca1-4b95-ae36-4f8d5c303e92)
+In this project i am created searching, sorting, filtering, order details and more functionality.
+This is my Home page. Here i am use routing to go any where or OnClick event of the button.
+Here in the first header i am created the logo as "Mitraa" as my Brand.
+In the header Section i am added the searching functionality. i am showing in the below image.
 
-### `npm start`
+![searching4](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/fbb1bff7-a564-4c20-99b8-e72269b75cff)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In the below image it shows the sorted product when you clicked on any checkbox or radiobutton present on the top of the products.
+![sorting3](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/054c661c-e0ed-4d0f-a6ba-1617b7527d52)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In the below image i am showing the multiple products which is present in the json file. and i am using the json-server.
+![prod5](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/43d7a09e-8be7-4dde-b1d8-8a8abeaa971d)
 
-### `npm test`
+In the below image when you click on any products image then it will redirect to the product details page. and it will shows the full details of the product.
+![prodDetails5](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/77a19a8b-ec58-4b8d-8091-cb85bbe88d75)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In the below image it shows the cart added item when you click on the add to cart button which is present on the every product.
+![Cart5](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/70afec2f-d4ff-4a4d-b938-b435cf1d8fd2)
+In the cart section i am added multiple functionality. the remove item, add quantity, showing the change in total when you click increase or decrease the quantity.
 
-### `npm run build`
+In the below image i am added the sign in functinality to user create its own order.
+![signin6](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/06a76020-396c-4f58-bffa-5ecc73073b71)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you are entered a wrong password or email then it will shows the pop on the screen. shows in the below image
+![login err](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/0a234e5a-7ff2-472c-bef1-9588d90d2144)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If user is new to our website then user also can register a new user as our website.
+this is our registration form.
+![signup7](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/8b7ff73e-b6f0-4d86-849c-12c8a9f31383)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+if you are not logged in and you are press the button buy now it automatically redirects to the page of login. 
+Once you logged successfully then you did not need to fill the details of the address fields.becouse once session is started they automatically fetch the data from sessiostorage.
+![address8](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/64c8b907-3881-45b3-879d-890fb148b32b)
 
-### `npm run eject`
+Then you have to only click on the proceed button or confirm your details and total bill of your order as show in the below image.
+![confirmOrder9](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/ded698e3-c36d-49a4-a685-178159adc95b)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Once you confirm your order then it will show the massage as given below.
+![successfully order10](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/970176b2-3e2e-47a6-9f24-1e874be0ddbc)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once your order is placed successfully then you can view your order details in the after clicked on the goto my orders or clicking on the button my order which is present on the header.
+![orders11](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/3b89e0ad-9ec1-42ff-9409-8ca25768b4df)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
