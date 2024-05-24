@@ -15,7 +15,7 @@ export default function Aboutus() {
 
                                 <div class="col-md-2">
                                     <h6 class="text-uppercase font-weight-bold">
-                                        <a href="#!" class="text-white">About us</a>
+                                        <a href="https://www.linkedin.com/in/rushikesh-gaikwad-224698258/" class="text-white">About us</a>
                                     </h6>
                                 </div>
 
@@ -41,7 +41,7 @@ export default function Aboutus() {
 
                                 <div class="col-md-2">
                                     <h6 class="text-uppercase font-weight-bold">
-                                        <a href="#!" class="text-white">Contact</a>
+                                        <a href="https://www.linkedin.com/in/rushikesh-gaikwad-224698258/" class="text-white">Contact</a>
                                     </h6>
                                 </div>
 
