@@ -24,7 +24,7 @@ Here in the first header i am created the logo as "Mitraa" as my Brand.
 ![prod5](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/43d7a09e-8be7-4dde-b1d8-8a8abeaa971d)
 
 
-### Product Deatials:
+### Product Details:
 In the below image when you click on any products image then it will redirect to the product details page. and it shows the full details of the product.
 ![prodDetails5](https://github.com/Rushikesh01Gaikwad/E-Commerce-React/assets/136779452/77a19a8b-ec58-4b8d-8091-cb85bbe88d75)
 
