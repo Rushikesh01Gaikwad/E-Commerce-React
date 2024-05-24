@@ -41,24 +41,34 @@ export default function CartSidebar() {
 
   const handleBuyNow = () => {
 
-    const formatDate = (date) => {
-      const d = new Date(date);
-      const day = (`0${d.getDate()}`).slice(-2);
-      const month = (`0${d.getMonth() + 1}`).slice(-2);
-      const year = d.getFullYear();
-      return `${day}/${month}/${year}`;
-    };
+    let name = sessionStorage.getItem('name')
 
-    const orderDetails = items.map(item => ({
-      id: item.id,
-      name: item.name,
-      quantity: quantities[item.id] || 1,
-      price: item.price,
-      image: item.image,
-      date: formatDate(new Date())
-    }));
-    dispatch(myOrder(orderDetails));
-    navigate(`/address?total=${total}`); // Navigate to MyOrders page
+    if(name === "" || name === null)
+    {
+      navigate('/login')
+    }
+    else
+    {
+      const formatDate = (date) => {
+        const d = new Date(date);
+        const day = (`0${d.getDate()}`).slice(-2);
+        const month = (`0${d.getMonth() + 1}`).slice(-2);
+        const year = d.getFullYear();
+        return `${day}/${month}/${year}`;
+      };
+  
+      const orderDetails = items.map(item => ({
+        id: item.id,
+        name: item.name,
+        quantity: quantities[item.id] || 1,
+        price: item.price,
+        image: item.image,
+        date: formatDate(new Date())
+      }));
+      dispatch(myOrder(orderDetails));
+      navigate(`/address?total=${total}`); // Navigate to MyOrders page
+    }
+
   };
 
   return (

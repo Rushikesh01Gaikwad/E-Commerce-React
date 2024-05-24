@@ -30,8 +30,12 @@ function Address() {
                 var userData = response.data;
                 console.log(userData, orderDetails, userData[0]["order"], userData[0]["id"])
 
+                console.log(orderDetails)
+
+                orderDetails.forEach((item) => {
+                    userData[0]["order"]?.push(item);
+                });
                 // Update the order key with orderDetails
-                userData[0]["order"]?.push(orderDetails[0]);
 
                 // Make a POST request to update the user data on the server
                 axios.put(`http://localhost:3000/Data/${userData[0]["id"]}`, userData[0])

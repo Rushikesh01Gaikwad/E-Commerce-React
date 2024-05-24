@@ -14,7 +14,6 @@ export default function Navbar() {
 
   useEffect(() => {
     let data = sessionStorage.getItem('name');
-    console.log(data)
     if (data) {
       setBtn(true)
     }
