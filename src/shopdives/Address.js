@@ -116,7 +116,7 @@ function Address() {
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    {/* <div class="form-check">
+                                    <div class="form-check">
                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
                                         <label class="form-check-label" for="exampleRadios1">
                                             UPI
@@ -143,9 +143,9 @@ function Address() {
                                             EMI
                                         </label>
                                     </div>
-                                    <br /> */}
+                                    <br />
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5" checked />
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5"/>
                                         <label class="form-check-label" for="exampleRadios5">
                                             Cash On Delivery
                                         </label>

@@ -26,7 +26,28 @@
           "price": 2999,
           "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
           "date": "24/05/2024"
-        }
+        },
+        {
+          "id": 13,
+          "name": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+          "quantity": 1,
+          "price": 49999,
+          "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+          "date": "22/09/2024"
+        },
+        {
+          "id": 14,
+          "name": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+          "quantity": 1,
+          "price": 61999,
+          "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+          "date": "22/09/2024"
+        },
+        null,
+        "White Gold Plated Princess",
+        1299,
+        "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+        null
       ]
     },
     {
